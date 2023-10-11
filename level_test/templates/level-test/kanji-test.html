@@ -1,83 +1,58 @@
 {% extends "level-test/base.html" %}
-{% load crispy_forms_tags %}
-
 {% block content %}
-  <h1>Kanji Test (N5 Level)</h1>
-  <form method="post" action="{% url 'level-test-kanji-test' %}">
+
+<h1>Kanji Test</h1>
+<p>Current Kanji: {{ kanji }}</p>
+
+<form method="post" id="kanjiTestForm">
     {% csrf_token %}
-    {{ form.current_index }}  <!-- render the hidden field -->
-    <div id="kanji-test">
-      {% for kanji in kanji_list %}
-      <div class="kanji-card" data-index="{{ forloop.counter0 }}" {% if forloop.counter0 != form.current_index.value %}style="display: none;"{% endif %}>
-          <h3>{{ kanji.expression }}</h3>
-          <input type="text" name="answer" class="{{ form.fields.answer.widget.attrs.class }}">
-      </div>
-      {% endfor %}
-    </div>
-    <input type="submit" value="Submit Answer">
-  </form>
-  <div class="score">
-    <p>Your Score: <span id="user-score">0</span>/{{ kanji_list|length }}</p>
-  </div>
-{% endblock %}
+    <input type="text" name="answer" placeholder="Enter the meaning">
+    <input type="submit" value="Submit">
+</form>
 
-{% block scripts %}
+<p id="feedback"></p>
+
 <script>
-  document.addEventListener('submit', function(event) {
-    event.preventDefault();
-    var form = event.target;
-    var userAnswer = form.querySelector('input[name="answer"]').value;
-    var formData = new FormData(form);
+    // Adding an event listener to the form's submit event
+    document.getElementById('kanjiTestForm').addEventListener('submit', function(e) {
+        e.preventDefault();  // Preventing the form's default submit action
 
-    fetch("{% url 'level-test-kanji-test' %}", {
-        method: 'POST',
-        body: formData,
-        headers: {
-            "X-Requested-With": "XMLHttpRequest",
-            "X-CSRFToken": document.querySelector('[name=csrfmiddlewaretoken]').value
-        }
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.is_correct) {
-            incrementScore();
-        } else {
-            displayCorrectAnswer(data.correct_answer);
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
+        let form = e.target;
+        let formData = new FormData(form);
+
+        fetch("{% url 'kanji_question' %}", {
+            method: 'POST',
+            body: formData,
+            headers: {
+                "X-Requested-With": "XMLHttpRequest"
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // If the answer is correct, notify the user and update the UI accordingly
+            if (data.is_correct) {
+                document.getElementById('feedback').textContent = "Correct! Enter for next kanji.";
+                form.querySelector('input[name="answer"]').value = "";  // Clearing the input field
+                form.querySelector('input[name="answer"]').classList.add('correct');
+                form.querySelector('input[name="answer"]').classList.remove('incorrect');
+            } else {
+                document.getElementById('feedback').textContent = `Incorrect. The correct answer is: ${data.correct_answer}`;
+                form.querySelector('input[name="answer"]').classList.add('incorrect');
+                form.querySelector('input[name="answer"]').classList.remove('correct');
+            }
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error.message);
+        });
     });
-  });
 
-function incrementScore() {
-  var userScoreElem = document.getElementById('user-score');
-  var currentScore = parseInt(userScoreElem.textContent);
-  userScoreElem.textContent = currentScore + 1;
-}
+    // You can also add other event listeners here, for example, to handle pressing the Enter key for the next question
 
-function displayCorrectAnswer(answer) {
-  alert("Incorrect. The correct answer is: " + answer);
-}
-
-document.addEventListener('keydown', function(event) {
-  if (event.key === "Enter") {
-      displayNextKanji();
-  }
-});
-
-function displayNextKanji() {
-  var form = document.querySelector('form');
-  var currentKanjiCard = document.querySelector('.kanji-card[data-index="' + form.current_index.value + '"]');
-  var nextKanjiCard = document.querySelector('.kanji-card[data-index="' + (parseInt(form.current_index.value) + 1) + '"]');
-
-  currentKanjiCard.style.display = 'none';
-  if (nextKanjiCard) {
-      nextKanjiCard.style.display = 'block';
-      form.current_index.value = parseInt(form.current_index.value) + 1;
-  } else {
-      alert("Test completed!");
-  }
-}
 </script>
+
 {% endblock %}

@@ -4,6 +4,7 @@ from .models import Kanji, JLPTLevel
 from .forms import KanjiTestForm
 from .util import wordnet_similarity
 from django.http import JsonResponse
+import random
 
 # return what we want user to see from "home" page
 def home(request):
@@ -12,42 +13,47 @@ def home(request):
 def about(request):
     return render(request, 'level-test/about.html', {'title': 'About'})
 
+def start_test(request):
+    # Load a random deck of 50 kanji (10 from each level) and store them in the session.
+    levels = ["n5", "n4", "n3", "n2", "n1"]
+    kanji_deck = []
+    for level in levels:
+        kanji_for_level = list(Kanji.objects.filter(tags__level='n5').values_list('id', flat=True))
+        kanji_deck.extend(random.sample(kanji_for_level, 10))
+
+    request.session['kanji_deck'] = kanji_deck
+    request.session['current_index'] = 0
+    request.session['score'] = 0
+
+    return redirect('kanji_test')
+
+
 def kanji_test(request):
-    n5_kanji = Kanji.objects.filter(tags__level='n5')[:10]
-    context = {'kanji_list': n5_kanji}
+    current_index = request.session.get('current_index')
+    kanji_deck = request.session.get('kanji_deck')
+
+    if current_index >= len(kanji_deck):
+        # All questions have been answered
+        return render(request, 'test_complete.html', {'score': request.session.get('score')})
+
+    current_kanji = Kanji.objects.get(id=kanji_deck[current_index])
 
     if request.method == 'POST':
-        form = KanjiTestForm(request.POST)
-        if form.is_valid():
-            current_index = form.cleaned_data.get('current_index')
-            user_answer = form.cleaned_data.get('answer')
+        user_answer = request.POST.get('answer')
+        similarity = wordnet_similarity(user_answer, current_kanji.meaning)
 
-            if current_index < len(n5_kanji):
-                kanji = n5_kanji[current_index]
-                correct_answer = kanji.meaning
-                is_correct = form.is_answer_correct(correct_answer)
+        if similarity >= 0.7:
+            request.session['score'] += 1
+            is_correct = True
+        else:
+            is_correct = False
 
-                form.fields['answer'].widget.attrs['class'] = 'correct' if is_correct else 'incorrect'
-                current_index += 1
-                form.cleaned_data['current_index'] = current_index  # increment the current index for the next kanji
+        request.session['current_index'] += 1
 
-                # If the request is AJAX, return the result in JSON format
-                if request.is_ajax():
-                    return JsonResponse({
-                        'is_correct': is_correct,
-                        'correct_answer': None if is_correct else correct_answer
-                    })
+        # Return result as JSON for AJAX approach, or redirect for traditional approach.
+        return JsonResponse({
+            'is_correct': is_correct,
+            'correct_answer': current_kanji.meaning
+        })
 
-                if is_correct:
-                    context['correct_answer'] = None
-                else:
-                    context['correct_answer'] = correct_answer
-
-                context['form'] = form  # Remember to include the form in the context
-                return render(request, 'level-test/kanji-test.html', context)
-
-    else:
-        form = KanjiTestForm()
-
-    context['form'] = form  # Adding the form to the context outside the POST block
-    return render(request, 'level-test/kanji-test.html', context)
+    return render(request, 'kanji-test.html', {'kanji': current_kanji.expression})
