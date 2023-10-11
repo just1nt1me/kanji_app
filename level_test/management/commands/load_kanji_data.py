@@ -2,7 +2,7 @@ import csv
 import os
 from django.conf import settings
 from django.core.management.base import BaseCommand
-from kanji_test.models import Kanji, JLPTLevel
+from level_test.models import Kanji, JLPTLevel
 
 class Command(BaseCommand):
     help = 'Load Kanji data from CSV files into the database'

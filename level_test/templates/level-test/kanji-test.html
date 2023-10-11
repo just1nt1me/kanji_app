@@ -1,4 +1,83 @@
 {% extends "level-test/base.html" %}
+{% load crispy_forms_tags %}
+
 {% block content %}
-  <h1>Kanji Test</h1>
-{% endblock content %}
+  <h1>Kanji Test (N5 Level)</h1>
+  <form method="post" action="{% url 'level-test-kanji-test' %}">
+    {% csrf_token %}
+    {{ form.current_index }}  <!-- render the hidden field -->
+    <div id="kanji-test">
+      {% for kanji in kanji_list %}
+      <div class="kanji-card" data-index="{{ forloop.counter0 }}" {% if forloop.counter0 != form.current_index.value %}style="display: none;"{% endif %}>
+          <h3>{{ kanji.expression }}</h3>
+          <input type="text" name="answer" class="{{ form.fields.answer.widget.attrs.class }}">
+      </div>
+      {% endfor %}
+    </div>
+    <input type="submit" value="Submit Answer">
+  </form>
+  <div class="score">
+    <p>Your Score: <span id="user-score">0</span>/{{ kanji_list|length }}</p>
+  </div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  document.addEventListener('submit', function(event) {
+    event.preventDefault();
+    var form = event.target;
+    var userAnswer = form.querySelector('input[name="answer"]').value;
+    var formData = new FormData(form);
+
+    fetch("{% url 'level-test-kanji-test' %}", {
+        method: 'POST',
+        body: formData,
+        headers: {
+            "X-Requested-With": "XMLHttpRequest",
+            "X-CSRFToken": document.querySelector('[name=csrfmiddlewaretoken]').value
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.is_correct) {
+            incrementScore();
+        } else {
+            displayCorrectAnswer(data.correct_answer);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+  });
+
+function incrementScore() {
+  var userScoreElem = document.getElementById('user-score');
+  var currentScore = parseInt(userScoreElem.textContent);
+  userScoreElem.textContent = currentScore + 1;
+}
+
+function displayCorrectAnswer(answer) {
+  alert("Incorrect. The correct answer is: " + answer);
+}
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === "Enter") {
+      displayNextKanji();
+  }
+});
+
+function displayNextKanji() {
+  var form = document.querySelector('form');
+  var currentKanjiCard = document.querySelector('.kanji-card[data-index="' + form.current_index.value + '"]');
+  var nextKanjiCard = document.querySelector('.kanji-card[data-index="' + (parseInt(form.current_index.value) + 1) + '"]');
+
+  currentKanjiCard.style.display = 'none';
+  if (nextKanjiCard) {
+      nextKanjiCard.style.display = 'block';
+      form.current_index.value = parseInt(form.current_index.value) + 1;
+  } else {
+      alert("Test completed!");
+  }
+}
+</script>
+{% endblock %}
