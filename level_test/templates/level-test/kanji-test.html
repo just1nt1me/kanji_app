@@ -2,57 +2,60 @@
 {% block content %}
 
 <h1>Kanji Test</h1>
-<p>Current Kanji: {{ kanji }}</p>
+<h2>Level: {{ level | upper }}</h2>
+<p id="currentKanji">Current Kanji: {{ kanji }}</p>
 
 <form method="post" id="kanjiTestForm">
     {% csrf_token %}
     <input type="text" name="answer" placeholder="Enter the meaning">
-    <input type="submit" value="Submit">
+    <p id="scoreDisplay">Score: 0</p>
 </form>
 
 <p id="feedback"></p>
 
 <script>
-    // Adding an event listener to the form's submit event
-    document.getElementById('kanjiTestForm').addEventListener('submit', function(e) {
-        e.preventDefault();  // Preventing the form's default submit action
+  const form = document.getElementById('kanjiTestForm');
+  const feedbackElem = document.getElementById('feedback');
+  const answerInput = form.querySelector('input[name="answer"]');
 
-        let form = e.target;
-        let formData = new FormData(form);
+  form.addEventListener('submit', function(e) {
+      e.preventDefault();  // Preventing the form's default submit action
 
-        fetch("{% url 'kanji_question' %}", {
-            method: 'POST',
-            body: formData,
-            headers: {
-                "X-Requested-With": "XMLHttpRequest"
-            }
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            // If the answer is correct, notify the user and update the UI accordingly
-            if (data.is_correct) {
-                document.getElementById('feedback').textContent = "Correct! Enter for next kanji.";
-                form.querySelector('input[name="answer"]').value = "";  // Clearing the input field
-                form.querySelector('input[name="answer"]').classList.add('correct');
-                form.querySelector('input[name="answer"]').classList.remove('incorrect');
-            } else {
-                document.getElementById('feedback').textContent = `Incorrect. The correct answer is: ${data.correct_answer}`;
-                form.querySelector('input[name="answer"]').classList.add('incorrect');
-                form.querySelector('input[name="answer"]').classList.remove('correct');
-            }
-        })
-        .catch(error => {
-            console.error('There was a problem with the fetch operation:', error.message);
-        });
-    });
+      let formData = new FormData(form);
 
-    // You can also add other event listeners here, for example, to handle pressing the Enter key for the next question
-
+      fetch("{% url 'kanji_test' %}", {
+          method: 'POST',
+          body: formData,
+          headers: {
+              "X-Requested-With": "XMLHttpRequest"
+          }
+      })
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok');
+          }
+          return response.json();
+      })
+      .then(data => {
+          console.log(data);
+          if (data.is_correct) {
+              feedbackElem.textContent = "Correct!";
+              answerInput.value = "";  // Clearing the input field
+              answerInput.classList.add('correct');
+              answerInput.classList.remove('incorrect');
+          } else {
+              feedbackElem.textContent = `Incorrect. The correct answer is: ${data.correct_answer}`;
+              answerInput.value = "";  // Clearing the input field
+              answerInput.classList.add('incorrect');
+              answerInput.classList.remove('correct');
+          }
+          document.getElementById('scoreDisplay').textContent = `Score: ${data.score}`;
+          document.getElementById('currentKanji').textContent = `Current Kanji: ${data.kanji}`;
+      })
+      .catch(error => {
+          console.error('There was a problem with the fetch operation:', error.message);
+      });
+  });
 </script>
 
 {% endblock %}

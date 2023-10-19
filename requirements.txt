@@ -1,0 +1,6 @@
+crispy-bootstrap4==2022.1
+Django==4.2.6
+django-crispy-forms==2.0
+# nltk==3.5
+pandas==2.1.1
+spacy

@@ -1,7 +1,7 @@
 from django import forms
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Field, Submit
-from .util import wordnet_similarity
+from .util import spacy_similarity
 
 class KanjiTestForm(forms.Form):
     answer = forms.CharField()
@@ -16,5 +16,5 @@ class KanjiTestForm(forms.Form):
 
     def is_answer_correct(self, correct_answer):
         user_answer = self.cleaned_data.get('answer')
-        similarity = wordnet_similarity(user_answer, correct_answer)
+        similarity = spacy_similarity(user_answer, correct_answer)
         return similarity >= 0.7

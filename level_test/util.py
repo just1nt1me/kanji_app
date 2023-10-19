@@ -1,7 +1,8 @@
 import pandas as pd
 import re
-from nltk.corpus import wordnet
-from nltk.tokenize import word_tokenize
+import spacy
+# from nltk.corpus import wordnet
+# from nltk.tokenize import word_tokenize
 
 csv_list = ["n1.csv", "n2.csv", "n3.csv", "n4.csv", "n5.csv"]
 
@@ -30,37 +31,61 @@ def main():
         clean_csv(csv)
 
 # Define a function to compute WordNet-based similarity
-def wordnet_similarity(user_input, correct_answer):
-    user_tokens = word_tokenize(user_input)
-    answer_tokens = word_tokenize(correct_answer)
+# def wordnet_similarity(user_input, correct_answer):
+#     user_tokens = word_tokenize(user_input)
+#     answer_tokens = word_tokenize(correct_answer)
 
-    # Initialize a list to store individual word similarities
+#     # Initialize a list to store individual word similarities
+#     word_similarities = []
+
+#     for user_word in user_tokens:
+#         max_similarity = 0  # Initialize max similarity for the current user word
+
+#         for answer_word in answer_tokens:
+#             user_synsets = wordnet.synsets(user_word)
+#             answer_synsets = wordnet.synsets(answer_word)
+
+#             if user_synsets and answer_synsets:
+#                 similarity = max(
+#                     s1.wup_similarity(s2) for s1 in user_synsets for s2 in answer_synsets
+#                 )
+
+#                 if similarity > max_similarity:
+#                     max_similarity = similarity
+
+#         word_similarities.append(max_similarity)
+
+#     # Calculate the average similarity across all user words
+#     if word_similarities:
+#         average_similarity = sum(word_similarities) / len(word_similarities)
+#         return average_similarity
+#     else:
+#         return 0
+
+# Load a spaCy model (for English in this case)
+nlp = spacy.load("en_core_web_md")
+
+def spacy_similarity(user_input, correct_answer):
+    user_tokens = nlp(user_input)
+    answer_tokens = nlp(correct_answer)
+
     word_similarities = []
 
     for user_word in user_tokens:
         max_similarity = 0  # Initialize max similarity for the current user word
 
         for answer_word in answer_tokens:
-            user_synsets = wordnet.synsets(user_word)
-            answer_synsets = wordnet.synsets(answer_word)
-
-            if user_synsets and answer_synsets:
-                similarity = max(
-                    s1.wup_similarity(s2) for s1 in user_synsets for s2 in answer_synsets
-                )
-
-                if similarity > max_similarity:
-                    max_similarity = similarity
+            similarity = user_word.similarity(answer_word)
+            if similarity > max_similarity:
+                max_similarity = similarity
 
         word_similarities.append(max_similarity)
 
-    # Calculate the average similarity across all user words
     if word_similarities:
         average_similarity = sum(word_similarities) / len(word_similarities)
         return average_similarity
     else:
         return 0
-
 
 if __name__ == "__main__":
     main()
