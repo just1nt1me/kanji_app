@@ -3,7 +3,7 @@
 
 <h1>Kanji Test</h1>
 <h2>Level: {{ level | upper }}</h2>
-<p id="currentKanji">Current Kanji: {{ kanji }}</p>
+<p id="currentKanji">Question {{ index|add:"1" }}: {{ kanji }}</p>
 
 <form method="post" id="kanjiTestForm">
     {% csrf_token %}
@@ -39,18 +39,19 @@
       .then(data => {
           console.log(data);
           if (data.is_correct) {
-              feedbackElem.textContent = "Correct!";
+              feedbackElem.textContent = `Correct! ${data.prev_kanji} means ${data.correct_answer}`;
               answerInput.value = "";  // Clearing the input field
               answerInput.classList.add('correct');
               answerInput.classList.remove('incorrect');
           } else {
-              feedbackElem.textContent = `Incorrect. The correct answer is: ${data.correct_answer}`;
+              feedbackElem.textContent = `Incorrect. ${data.prev_kanji} means ${data.correct_answer}`;
               answerInput.value = "";  // Clearing the input field
               answerInput.classList.add('incorrect');
               answerInput.classList.remove('correct');
           }
+          document.querySelector('h2').textContent = `Level: ${data.level.toUpperCase()}`;
           document.getElementById('scoreDisplay').textContent = `Score: ${data.score}`;
-          document.getElementById('currentKanji').textContent = `Current Kanji: ${data.kanji}`;
+          document.getElementById('currentKanji').textContent = `Question ${data.index +1}: ${data.kanji}`;
       })
       .catch(error => {
           console.error('There was a problem with the fetch operation:', error.message);
