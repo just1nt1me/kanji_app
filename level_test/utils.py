@@ -1,8 +1,8 @@
 import pandas as pd
-import re
+import re, random
 import spacy
-# from nltk.corpus import wordnet
-# from nltk.tokenize import word_tokenize
+from .models import Kanji
+from django.shortcuts import render, redirect
 
 csv_list = ["n1.csv", "n2.csv", "n3.csv", "n4.csv", "n5.csv"]
 
@@ -29,6 +29,9 @@ def clean_csv(csv):
 def main():
     for csv in csv_list:
         clean_csv(csv)
+
+# from nltk.corpus import wordnet
+# from nltk.tokenize import word_tokenize
 
 # Define a function to compute WordNet-based similarity
 # def wordnet_similarity(user_input, correct_answer):
@@ -86,6 +89,35 @@ def spacy_similarity(user_input, correct_answer):
         return average_similarity
     else:
         return 0
+
+def check_answer_similarity(user_answer, correct_answer):
+    similarity = spacy_similarity(user_answer, correct_answer)
+    if similarity >= 0.8:
+        return True
+    return False
+
+def handle_test_completion_or_advancement(request):
+    levels = ["n5", "n4", "n3", "n2", "n1"]
+    current_level_index = int(request.session.get('current_level_index'))
+
+    # If 10 questions have been answered (starts at 0)
+    if int(request.session['score']) < 5:  # If score is less than 5
+        return render(request, 'level-test/test-failed.html', {'score': request.session.get('score')})
+
+    # Check if there are more levels left
+    if current_level_index < len(levels) - 1:
+        next_level_index = current_level_index + 1  # Incrementing level here
+        kanji_for_level = list(Kanji.objects.filter(tags__level=levels[next_level_index]).values_list('id', flat=True))
+        request.session['kanji_deck'] = random.sample(kanji_for_level, 10)
+        request.session['current_index'] = 0
+        request.session['score'] = 0
+        request.session['current_level_index'] = next_level_index  # Update the session here
+        request.session.modified = True
+        return redirect('kanji_test')
+    else:
+        # All questions have been answered and all levels cleared
+        return render(request, 'level-test/test-complete.html', {'score': request.session.get('score')})
+
 
 if __name__ == "__main__":
     main()

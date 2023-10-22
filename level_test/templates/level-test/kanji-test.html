@@ -37,26 +37,35 @@
           return response.json();
       })
       .then(data => {
-          console.log(data);
+          if(data.level_up) {
+              // Handle level up scenario
+              feedbackElem.textContent = "Congratulations! You've completed this level.";
+
+              // Redirect to 'kanji_test' to fetch the next level's deck
+              window.location.href = "{% url 'kanji_test' %}";
+              return;
+          }
+
           if (data.is_correct) {
-              feedbackElem.textContent = `Correct! ${data.prev_kanji} means ${data.correct_answer}`;
+              feedbackElem.textContent = `Correct! ${data.prev_kanji} (${data.reading}) means ${data.correct_answer}`;
               answerInput.value = "";  // Clearing the input field
               answerInput.classList.add('correct');
               answerInput.classList.remove('incorrect');
           } else {
-              feedbackElem.textContent = `Incorrect. ${data.prev_kanji} means ${data.correct_answer}`;
+              feedbackElem.textContent = `Incorrect. ${data.prev_kanji} (${data.reading}) means ${data.correct_answer}`;
               answerInput.value = "";  // Clearing the input field
               answerInput.classList.add('incorrect');
               answerInput.classList.remove('correct');
           }
           document.querySelector('h2').textContent = `Level: ${data.level.toUpperCase()}`;
           document.getElementById('scoreDisplay').textContent = `Score: ${data.score}`;
-          document.getElementById('currentKanji').textContent = `Question ${data.index +1}: ${data.kanji}`;
+          document.getElementById('currentKanji').textContent = `Question ${data.index + 1}: ${data.kanji}`;
       })
       .catch(error => {
           console.error('There was a problem with the fetch operation:', error.message);
       });
   });
 </script>
+
 
 {% endblock %}
