@@ -12,11 +12,14 @@
 </form>
 
 <p id="feedback"></p>
+<div id="results"></div>
 
 <script>
   const form = document.getElementById('kanjiTestForm');
   const feedbackElem = document.getElementById('feedback');
   const answerInput = form.querySelector('input[name="answer"]');
+  const resultsDiv = document.getElementById('results');
+
 
   form.addEventListener('submit', function(e) {
       e.preventDefault();  // Preventing the form's default submit action
@@ -50,7 +53,15 @@
       }
 
       if(data.level_up) {
-          feedbackElem.textContent += " Congratulations! You've completed this level. Press Enter to continue.";
+        let results = document.createElement('p');
+
+          if(data.pass) {
+            results.textContent += ` Congratulations! You've passed the ${data.level} Level Test. Press Enter to continue.`;
+        } else {
+            results.textContent += ` Sorry, you did not pass the ${data.level} Level Test. Press Enter for your results.`;
+        }
+
+        resultsDiv.appendChild(results);
 
           document.addEventListener('keydown', function(event) {
               if (event.code === 'Enter') {
