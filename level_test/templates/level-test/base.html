@@ -2,14 +2,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+  {% block styles %}{% endblock %}
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
     <link rel="stylesheet" type="text/css" href="{% static 'level_test/main.css' %}">
 
     {% if title %}
@@ -45,7 +44,7 @@
         <div class="col-md-8">
           {% block content %}{% endblock %}
         </div>
-        <div class="col-md-4">
+        <!-- <div class="col-md-4">
           <div class="content-section">
             <h3>Our Sidebar</h3>
             <p class='text-muted'>You can put any information here you'd like.
@@ -56,6 +55,12 @@
                 <li class="list-group-item list-group-item-light">etc</li>
               </ul>
             </p>
+          </div> -->
+          <div id="darkModeContainer">
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider"></span>
+            </label>
           </div>
         </div>
       </div>
@@ -68,7 +73,37 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <!-- Custom Scripts Block -->
-    {% block scripts %}{% endblock %}
+    {% block scripts %}
+    <script>
+      const darkModeToggle = document.getElementById('darkModeToggle');
+
+      darkModeToggle.addEventListener('change', function() {
+          if (this.checked) {
+              document.body.classList.add('dark-mode');
+          } else {
+              document.body.classList.remove('dark-mode');
+          }
+      });
+
+      document.addEventListener('DOMContentLoaded', function() {
+          if (localStorage.getItem('dark-mode') === 'enabled') {
+              darkModeToggle.checked = true;
+              document.body.classList.add('dark-mode');
+          }
+      });
+
+      darkModeToggle.addEventListener('change', function() {
+          if (this.checked) {
+              document.body.classList.add('dark-mode');
+              localStorage.setItem('dark-mode', 'enabled');
+          } else {
+              document.body.classList.remove('dark-mode');
+              localStorage.removeItem('dark-mode');
+          }
+      });
+
+    </script>
+    {% endblock %}
 
   </body>
 </html>
