@@ -35,11 +35,38 @@ def kanji_test(request):
     kanji_deck = request.session.get('kanji_deck', [])
     current_level_index = int(request.session.get('current_level_index'))
     levels = ["n5", "n4", "n3", "n2", "n1"]
+    request.session['level_complete'] = False
+    request.session.modified = True
+
+    if request.session.get('current_index', 0) == 0:
+        request.session['level_complete'] = False
+        request.session.modified = True
 
     # Fetch current kanji
     current_kanji = Kanji.objects.get(id=kanji_deck[current_index])
 
     if request.method == 'POST':
+        print("POST request received.")
+        print(request.session['level_complete'])
+        print(current_index)
+        # Check if all kanjis in the current deck have been processed
+        if request.session['level_complete'] == True:
+            if int(request.session['score']) < 5:  # If score is less than 5
+                return render(request, 'level-test/test-failed.html', {'score': request.session.get('score')})
+
+            # Check if there are more levels left
+            if current_level_index < len(levels) - 1:
+                request.session['current_level_index'] += 1
+                kanji_for_level = list(Kanji.objects.filter(tags__level=levels[current_level_index]).values_list('id', flat=True))
+                request.session['kanji_deck'] = random.sample(kanji_for_level, 10)
+                request.session['current_index'] = 0
+                request.session['score'] = 0
+                request.session.modified = True
+                return redirect('kanji_test')
+            else:
+                # All questions have been answered and all levels cleared
+                return render(request, 'level-test/test-complete.html', {'score': request.session.get('score')})
+
         user_answer = request.POST.get('answer')
         similarity = spacy_similarity(user_answer, current_kanji.meaning)
         prev_kanji = current_kanji.expression
@@ -58,32 +85,18 @@ def kanji_test(request):
             print(f"Incorrect. Answer: {user_answer}, Expected: {current_kanji.meaning}")
         print(f"Current Score: {request.session['score']}")
 
-        # Increment the current index
-        request.session['current_index'] += 1
-        current_index = request.session['current_index']
-
-        # Check if all kanjis in the current deck have been processed
-        if current_index >= len(kanji_deck):
-            if int(request.session['score']) < 5:  # If score is less than 5
-                return render(request, 'test_failed.html', {'score': request.session.get('score')})
-
-            # Check if there are more levels left
-            if current_level_index < len(levels) - 1:
-                request.session['current_level_index'] += 1
-                kanji_for_level = list(Kanji.objects.filter(tags__level=levels[current_level_index]).values_list('id', flat=True))
-                request.session['kanji_deck'] = random.sample(kanji_for_level, 10)
-                request.session['current_index'] = 0
-                request.session['score'] = 0
-                request.session.modified = True
-                return redirect('kanji_test')
-            else:
-                # All questions have been answered and all levels cleared
-                return render(request, 'test_complete.html', {'score': request.session.get('score')})
+        if current_index == 9:
+            request.session['level_complete'] = True
+            request.session.save()
         else:
-            current_kanji = Kanji.objects.get(id=kanji_deck[current_index])  # Fetch the next kanji after changing index
+            # Increment the current index
+            request.session['current_index'] += 1
+            print("New current index:", request.session['current_index'])
+            current_index = request.session['current_index']
+            current_kanji = Kanji.objects.get(id=kanji_deck[current_index])
 
         # Check if the request is AJAX
-        if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
+        if request.method == 'POST' and request.headers.get('X-Requested-With') == 'XMLHttpRequest':
             return JsonResponse({
                 'is_correct': is_correct,
                 'prev_kanji': prev_kanji,
@@ -96,3 +109,10 @@ def kanji_test(request):
 
     request.session.modified = True
     return render(request, 'level-test/kanji-test.html', {'kanji': current_kanji.expression, 'level': levels[current_level_index]})
+
+
+def test_complete(request):
+    return render(request, 'level-test/test-complete.html', {'title': 'Test Complete'})
+
+def test_failed(request):
+    return render(request, 'level-test/test-failed.html', {'title': 'Test Failed'})
