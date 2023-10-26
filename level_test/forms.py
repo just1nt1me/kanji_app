@@ -1,7 +1,7 @@
 from django import forms
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Field, Submit
-from .util import spacy_similarity
+from .utils import spacy_similarity
 
 class KanjiTestForm(forms.Form):
     answer = forms.CharField()
