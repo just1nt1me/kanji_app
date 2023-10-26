@@ -1,71 +1,96 @@
 {% extends "level-test/base.html" %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'level_test/kanji-test.css' %}">
+{% endblock %}
+
 {% block content %}
+  <h1>Kanji Test: {{ level | upper }}</h1>
+  <p id="currentKanji">
+    {% if kanji != None %}
+        {{ kanji }}
+    {% elif pass %}
+        &#x2705; <!-- This is the Unicode code for the ✅ emoji. Displayed when "pass" is True. -->
+    {% else %}
+        &#x274C; <!-- This is the Unicode code for the ❌ emoji. Displayed when "pass" is False. -->
+    {% endif %}
+  </p>
 
-<h1>Kanji Test</h1>
-<h2>Level: {{ level | upper }}</h2>
-<p id="currentKanji">Question {{ index|add:"1" }}: {{ kanji }}</p>
+  <form method="post" id="kanjiTestForm">
+      {% csrf_token %}
+      <input type="text" name="answer" placeholder="Enter the meaning">
+      <p id="scoreDisplay">Score: {{ score }}</p>
+  </form>
 
-<form method="post" id="kanjiTestForm">
-    {% csrf_token %}
-    <input type="text" name="answer" placeholder="Enter the meaning">
-    <p id="scoreDisplay">Score: 0</p>
-</form>
+  <p id="feedback"></p>
+  <div id="results"></div>
+{% endblock %}
 
-<p id="feedback"></p>
+{% block scripts %}
+  {{ block.super }}
+  <script>
+    const form = document.getElementById('kanjiTestForm');
+    const feedbackElem = document.getElementById('feedback');
+    const answerInput = form.querySelector('input[name="answer"]');
+    const resultsDiv = document.getElementById('results');
 
-<script>
-  const form = document.getElementById('kanjiTestForm');
-  const feedbackElem = document.getElementById('feedback');
-  const answerInput = form.querySelector('input[name="answer"]');
 
-  form.addEventListener('submit', function(e) {
-      e.preventDefault();  // Preventing the form's default submit action
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();  // Preventing the form's default submit action
 
-      let formData = new FormData(form);
+        let formData = new FormData(form);
 
-      fetch("{% url 'kanji_test' %}", {
-          method: 'POST',
-          body: formData,
-          headers: {
-              "X-Requested-With": "XMLHttpRequest"
-          }
-      })
-      .then(response => {
-          if (!response.ok) {
-              throw new Error('Network response was not ok');
-          }
-          return response.json();
-      })
-      .then(data => {
-          if(data.level_up) {
-              // Handle level up scenario
-              feedbackElem.textContent = "Congratulations! You've completed this level.";
+        fetch("{% url 'kanji_test' %}", {
+            method: 'POST',
+            body: formData,
+            headers: {
+                "X-Requested-With": "XMLHttpRequest"
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.is_correct) {
+            feedbackElem.textContent = `Correct! ${data.prev_kanji} (${data.reading}) means ${data.correct_answer}`;
+            answerInput.value = "";  // Clearing the input field
+            answerInput.classList.add('correct');
+            answerInput.classList.remove('incorrect');
+        } else {
+            feedbackElem.textContent = `Incorrect. ${data.prev_kanji} (${data.reading}) means ${data.correct_answer}`;
+            answerInput.value = "";  // Clearing the input field
+            answerInput.classList.add('incorrect');
+            answerInput.classList.remove('correct');
+        }
 
-              // Redirect to 'kanji_test' to fetch the next level's deck
-              window.location.href = "{% url 'kanji_test' %}";
-              return;
-          }
+        if(data.level_up) {
+          let results = document.createElement('p');
 
-          if (data.is_correct) {
-              feedbackElem.textContent = `Correct! ${data.prev_kanji} (${data.reading}) means ${data.correct_answer}`;
-              answerInput.value = "";  // Clearing the input field
-              answerInput.classList.add('correct');
-              answerInput.classList.remove('incorrect');
+            if(data.pass) {
+              results.textContent += ` Congratulations! You've passed the ${data.level} Level Test. Press Enter to continue.`;
           } else {
-              feedbackElem.textContent = `Incorrect. ${data.prev_kanji} (${data.reading}) means ${data.correct_answer}`;
-              answerInput.value = "";  // Clearing the input field
-              answerInput.classList.add('incorrect');
-              answerInput.classList.remove('correct');
+              results.textContent += ` Sorry, you did not pass the ${data.level} Level Test. Press Enter for your results.`;
           }
-          document.querySelector('h2').textContent = `Level: ${data.level.toUpperCase()}`;
-          document.getElementById('scoreDisplay').textContent = `Score: ${data.score}`;
-          document.getElementById('currentKanji').textContent = `Question ${data.index + 1}: ${data.kanji}`;
-      })
-      .catch(error => {
-          console.error('There was a problem with the fetch operation:', error.message);
-      });
-  });
-</script>
 
+          resultsDiv.appendChild(results);
 
+            document.addEventListener('keydown', function(event) {
+                if (event.code === 'Enter') {
+                    window.location.href = "{% url 'kanji_test' %}";
+                }
+            }, {once: true});  // The event will be removed after being called once
+        }
+            document.querySelector('h1').textContent = `${data.level.toUpperCase()}`;
+            document.getElementById('scoreDisplay').textContent = `Score: ${data.score}/${data.index}`;
+            document.getElementById('currentKanji').textContent = `${data.kanji}`;
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error.message);
+        });
+    });
+  </script>
 {% endblock %}

@@ -81,7 +81,8 @@ def kanji_test_post(request):
             'index': request.session['current_index'],
             'kanji': current_kanji.expression if not level_up else None,
             'level': levels[int(request.session.get('current_level_index'))],
-            'level_up': level_up
+            'level_up': level_up,
+            'pass': True if request.session['score'] >= 5 else False,
         }
         response = JsonResponse(data)
         print("AJAX check completed")
