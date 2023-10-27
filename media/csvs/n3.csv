@@ -1,14 +1,14 @@
 expression,reading,meaning,tags
 作法,さほう,"manners, etiquette, propriety",n3
 様々,さまざま,"varied, various",n3
-冷ます,さます,"to cool, to let cool",n3
-覚ます,さます,to awaken,n3
-冷める,さめる,"to become cool, to wear off",n3
-覚める,さめる,"to wake, to wake up",n3
+冷ます,さます," cool,  let cool",n3
+覚ます,さます, awaken,n3
+冷める,さめる," become cool,  wear off",n3
+覚める,さめる," wake,  wake up",n3
 左右,さゆう,left and right influence,n3
 皿,さら,"plate, dish",n3
 更に,さらに,"furthermore, moreover",n3
-去る,さる,"to leave, to go away",n3
+去る,さる," leave,  go away",n3
 猿,さる,monkey,n3
 騒ぎ,さわぎ,"uproar, disturbance",n3
 参加,さんか,participation,n3
@@ -37,12 +37,12 @@ expression,reading,meaning,tags
 事情,じじょう,"circumstances, situation, reasons",n3
 詩人,しじん,poet,n3
 自身,じしん,oneself,n3
-沈む,しずむ,to sink to feel depressed,n3
+沈む,しずむ, sink  feel depressed,n3
 自然,しぜん,"nature, spontaneous",n3
 思想,しそう,"thought, idea",n3
 舌,した,tongue,n3
 次第,しだい,order circumstances immediately,n3
-従う,したがう,"to abide by the rules, to obey",n3
+従う,したがう," abide by the rules,  obey",n3
 親しい,したしい,"intimate, close , friend",n3
 質,しつ,"quality, nature of person",n3
 失業,しつぎょう,unemployment,n3
@@ -66,15 +66,15 @@ expression,reading,meaning,tags
 芝居,しばい,"play, drama",n3
 芝生,しばふ,lawn,n3
 支払,しはらい,payment,n3
-支払う,しはらう,to pay,n3
+支払う,しはらう, pay,n3
 死亡,しぼう,death,n3
 資本,しほん,"funds, capital",n3
 姉妹,しまい,sisters,n3
 自慢,じまん,"pride, boast",n3
 地味,じみ,"quiet, plain, conservative",n3
-示す,しめす,"to show, to indicate",n3
-占める,しめる,to take up to account for,n3
-湿る,しめる,"to be wet, to be damp",n3
+示す,しめす," show,  indicate",n3
+占める,しめる, take up  account for,n3
+湿る,しめる," be wet,  be damp",n3
 下,しも,"under, below, beneath",n3
 霜,しも,frost,n3
 借金,しゃっきん,"debt, loan, liabilities",n3
@@ -123,7 +123,7 @@ expression,reading,meaning,tags
 障害,しょうがい,"obstacle, impediment",n3
 奨学金,しょうがくきん,scholarship,n3
 乗客,じょうきゃく,passenger,n3
-上京,じょうきょう,proceeding to the capital tokyo,n3
+上京,じょうきょう,proceeding  the capital tokyo,n3
 状況,じょうきょう,"state of affairs, situation",n3
 条件,じょうけん,"conditions, terms",n3
 正午,しょうご,"noon, midday",n3
@@ -132,7 +132,7 @@ expression,reading,meaning,tags
 少女,しょうじょ,young girl,n3
 少々,しょうしょう,a little short time formal for  ,n3
 症状,しょうじょう,"symptoms, condition",n3
-生じる,しょうじる,"to occur, to arise, to be generated",n3
+生じる,しょうじる," occur,  arise,  be generated",n3
 状態,じょうたい,"condition, situation",n3
 上達,じょうたつ,"improvement, advance",n3
 冗談,じょうだん,a joke,n3
@@ -173,7 +173,7 @@ expression,reading,meaning,tags
 知合い,しりあい,acquaintance,n3
 印,しるし,mark symbol evidence,n3
 城,しろ,castle,n3
-進学,しんがく,going on to university,n3
+進学,しんがく,going on  university,n3
 神経,しんけい,"nerve, sensitivity",n3
 真剣,しんけん,"seriousness, earnestness",n3
 信仰,しんこう,"religious faith, belief",n3
@@ -182,8 +182,8 @@ expression,reading,meaning,tags
 深刻,しんこく,serious,n3
 診察,しんさつ,medical examination of a patient,n3
 人種,じんしゅ,race of people,n3
-信じる,しんじる,to believe,n3
-人生,じんせい,"human life , conception to death",n3
+信じる,しんじる, believe,n3
+人生,じんせい,"human life , conception  death",n3
 親戚,しんせき,relatives,n3
 新鮮,しんせん,fresh,n3
 心臓,しんぞう,heart,n3
@@ -208,25 +208,25 @@ expression,reading,meaning,tags
 数字,すうじ,"numeral, figure",n3
 末,すえ,"the end of, powder",n3
 姿,すがた,"figure, shape, appearance",n3
-救う,すくう,"to rescue from, to help out of",n3
-優れる,すぐれる,"to surpass, to outstrip, to excel",n3
+救う,すくう," rescue from,  help out of",n3
+優れる,すぐれる," surpass,  outstrip,  excel",n3
 少しも,すこしも,"anything of, not one bit",n3
-過ごす,すごす,"to pass, to spend time",n3
+過ごす,すごす," pass,  spend time",n3
 筋,すじ,"muscle, string, line",n3
-進める,すすめる,"to advance, to promote, to hasten",n3
-勧める,すすめる,"to urge someone to do something, to recommend",n3
+進める,すすめる," advance,  promote,  hasten",n3
+勧める,すすめる," urge someone  do something,  recommend",n3
 頭痛,ずつう,headache,n3
 既に,すでに,already same as ,n3
 全て,すべて,"all, the whole, entirely",n3
-済ませる,すませる,to be finished,n3
+済ませる,すませる, be finished,n3
 角,すみ,corner,n3
 墨,すみ,ink,n3
-澄む,すむ,"to clear , weather, to become transparent",n3
-清む,すむ,"to clear , weather, to become transparent",n3
-刷る,する,to print,n3
-為る,する,"to do, to attempt",n3
+澄む,すむ," clear , weather,  become transparent",n3
+清む,すむ," clear , weather,  become transparent",n3
+刷る,する, print,n3
+為る,する," do,  attempt",n3
 鋭い,するどい,"pointed, sharp",n3
-すれ違う,すれちがう,to pass by one another,n3
+すれ違う,すれちがう, pass by one another,n3
 正,せい,"logical true, regular",n3
 生,せい,birth,n3
 性,せい,"sex, gender",n3
@@ -272,34 +272,34 @@ expression,reading,meaning,tags
 相変わらず,あいかわらず,"as ever, as usual",n3
 愛情,あいじょう,"love, affection",n3
 合図,あいず,"sign, signal",n3
-愛する,あいする,to love,n3
-相手,あいて,partner addressee the person you are talking to,n3
-遭う,あう,"to meet, to encounter undesirable nuance",n3
+愛する,あいする, love,n3
+相手,あいて,partner addressee the person you are talking ,n3
+遭う,あう," meet,  encounter undesirable nuance",n3
 明かり,あかり,"lamplight, light in general",n3
 空き,あき,"vacancy, opening, space",n3
 明らか,あきらか,"obvious, clear",n3
-諦める,あきらめる,"to give up, to abandon",n3
-飽きる,あきる,"to get tired of, to lose interest in",n3
+諦める,あきらめる," give up,  abandon",n3
+飽きる,あきる," get tired of,  lose interest in",n3
 握手,あくしゅ,handshake,n3
 悪魔,あくま,"devil, demon, evil spirit",n3
-明ける,あける,"to dawn, to become daylight",n3
-揚げる,あげる,"to lift, to fry",n3
-挙げる,あげる,"to raise to list, to cite",n3
-預かる,あずかる,to keep something for someone,n3
-預ける,あずける,"to give into custody, to deposit",n3
+明ける,あける," dawn,  become daylight",n3
+揚げる,あげる," lift,  fry",n3
+挙げる,あげる," raise  list,  cite",n3
+預かる,あずかる, keep something for someone,n3
+預ける,あずける," give into custody,  deposit",n3
 汗,あせ,"sweat, perspiration",n3
-与える,あたえる,to give,n3
+与える,あたえる, give,n3
 温かい,あたたかい,warm,n3
-暖まる,あたたまる,to warm up,n3
-温まる,あたたまる,"to warm oneself, to get warm",n3
-暖める,あたためる,"to warm up to someone/something, to heat up to someone/something",n3
-温める,あたためる,"to warm, to heat",n3
+暖まる,あたたまる, warm up,n3
+温まる,あたたまる," warm oneself,  get warm",n3
+暖める,あたためる," warm up  someone/something,  heat up  someone/something",n3
+温める,あたためる," warm,  heat",n3
 辺り,あたり,"vicinity, nearby",n3
 当たり前,あたりまえ,"usual, common, obvious",n3
-当たる,あたる,"to be hit, to be successful",n3
-扱う,あつかう,"to treat, to handle, to deal with",n3
+当たる,あたる," be hit,  be successful",n3
+扱う,あつかう," treat,  handle,  deal with",n3
 集まり,あつまり,"gathering, meeting, collection",n3
-当てる,あてる,to hit to apply to,n3
+当てる,あてる, hit  apply ,n3
 跡,あと,trace remains scar,n3
 穴,あな,hole,n3
 油,あぶら,oil,n3
@@ -307,18 +307,18 @@ expression,reading,meaning,tags
 誤り,あやまり,error,n3
 粗,あら,"defect, flaw, fault",n3
 嵐,あらし,storm,n3
-争う,あらそう,"to dispute, to argue, to fight",n3
+争う,あらそう," dispute,  argue,  fight",n3
 新た,あらた,"new, fresh",n3
-表す,あらわす,"to express, to show",n3
-現す,あらわす,"to show, to appear, to reveal",n3
-著す,あらわす,"to write, to publish",n3
+表す,あらわす," express,  show",n3
+現す,あらわす," show,  appear,  reveal",n3
+著す,あらわす," write,  publish",n3
 現れ,あらわれ,"expression, indication, sign",n3
-現れる,あらわれる,"to appear , to become visible to express",n3
-在る; 有る,ある,"to live, to be, to exist",n3
+現れる,あらわれる," appear ,  become visible  express",n3
+在る; 有る,ある," live,  be,  exist",n3
 或,ある,"a certain, some",n3
 泡,あわ,"bubble, foam",n3
-合わせる,あわせる,to combine,n3
-慌てる,あわてる,to become confused、to panic,n3
+合わせる,あわせる, combine,n3
+慌てる,あわてる, become confused、 panic,n3
 哀れ,あわれ,"helpless, pity, pathetic",n3
 案,あん,"plan, scheme, proposal",n3
 案外,あんがい,unexpectedly,n3
@@ -342,9 +342,9 @@ expression,reading,meaning,tags
 以前,いぜん,in the past before,n3
 板,いた,"board, plank",n3
 偉大,いだい,greatness,n3
-抱く,いだく,"to hold  written expression, to embrace, to harbor",n3
+抱く,いだく," hold  written expression,  embrace,  harbor",n3
 痛み,いたみ,"pain, ache, sore",n3
-至る,いたる,"to come, to arrive",n3
+至る,いたる," come,  arrive",n3
 市,いち,"market, fair",n3
 位置,いち,"place, position",n3
 一時,いちじ,"for a time, temporarily",n3
@@ -376,35 +376,35 @@ expression,reading,meaning,tags
 医療,いりょう,"medical care, medical treatment",n3
 岩,いわ,rock,n3
 祝い,いわい,"celebration, festival",n3
-祝う,いわう,"to congratulate, to celebrate",n3
-言わば,いわば,so to speak,n3
+祝う,いわう," congratulate,  celebrate",n3
+言わば,いわば,so  speak,n3
 印刷,いんさつ,printing,n3
 印象,いんしょう,impression,n3
 引退,いんたい,retirement,n3
 引用,いんよう,"quotation, citation",n3
 魚,うお,fish,n3
-受け取る,うけとる,"to receive, to get, to accept",n3
-動かす,うごかす,"to move, to shift",n3
+受け取る,うけとる," receive,  get,  accept",n3
+動かす,うごかす," move,  shift",n3
 兎,うさぎ,"rabbit, hare",n3
 牛,うし,"cattle, cow",n3
-失う,うしなう,"to lose, to part with",n3
-疑う,うたがう,"to doubt, to distrust",n3
+失う,うしなう," lose,  part with",n3
+疑う,うたがう," doubt,  distrust",n3
 宇宙,うちゅう,"universe, cosmos, space",n3
-討つ,うつ,"to attack, to avenge",n3
-撃つ,うつ,"to attack, to shoot",n3
-映す,うつす,"to project, to reflect, to cast shadow",n3
-訴える,うったえる,"to complain, to appeal, to sue a person",n3
-写る,うつる,"to be photographed, to be projected",n3
-映る,うつる,"to be reflected, to come out photo",n3
-奪う,うばう,"to rob, to deprive",n3
+討つ,うつ," attack,  avenge",n3
+撃つ,うつ," attack,  shoot",n3
+映す,うつす," project,  reflect,  cast shadow",n3
+訴える,うったえる," complain,  appeal,  sue a person",n3
+写る,うつる," be photographed,  be projected",n3
+映る,うつる," be reflected,  come out photo",n3
+奪う,うばう," rob,  deprive",n3
 馬,うま,horse promoted bishop in japanese chess known as shogi,n3
 生まれ,うまれ,"birth, birthplace",n3
 有無,うむ,"yes or no, presence or absence",n3
 梅,うめ,"plum, lowest of a threetier ranking system",n3
-埋める,うめる,"to bury, to fill up, to fill a seat, a vacant position",n3
-裏切る,うらぎる,"to betray, to turn traitor",n3
+埋める,うめる," bury,  fill up,  fill a seat, a vacant position",n3
+裏切る,うらぎる," betray,  turn traitor",n3
 羨ましい,うらやましい,"envious, enviable",n3
-売れる,うれる,to be sold,n3
+売れる,うれる, be sold,n3
 噂,うわさ,"rumor, gossip",n3
 運,うん,"fortune, luck",n3
 運転,うんてん,"operation, driving",n3
@@ -416,9 +416,9 @@ expression,reading,meaning,tags
 衛星,えいせい,satellite,n3
 栄養,えいよう,"nutrition, nourishment",n3
 笑顔,えがお,smile on one's face,n3
-描く,えがく,"to draw, to depict, to describe",n3
+描く,えがく," draw,  depict,  describe",n3
 餌,えさ,"feed, bait",n3
-得る,える,"to get, to gain, to win, to learn",n3
+得る,える," get,  gain,  win,  learn",n3
 円,えん,"circle, yen",n3
 延期,えんき,"postponement, adjournment",n3
 演技,えんぎ,"acting, performance",n3
@@ -426,56 +426,56 @@ expression,reading,meaning,tags
 演説,えんぜつ,"speech, address",n3
 演奏,えんそう,musical performance,n3
 老い,おい,"old age, the aged",n3
-追い付く,おいつく,"to overtake, to catch up with",n3
+追い付く,おいつく," overtake,  catch up with",n3
 王,おう,king,n3
-追う,おう,"to chase, to run after",n3
+追う,おう," chase,  run after",n3
 応援,おうえん,"aid, assistance, help",n3
 王様,おうさま,king,n3
 王子,おうじ,prince,n3
-応じる,おうじる,"to adapt, to respond, to comply with",n3
+応じる,おうじる," adapt,  respond,  comply with",n3
 横断,おうだん,crossing,n3
-終える,おえる,to finish,n3
+終える,おえる, finish,n3
 大いに,おおいに,"much, considerably same as  , greatly",n3
-覆う,おおう,"to cover, to hide, to conceal",n3
+覆う,おおう," cover,  hide,  conceal",n3
 大家,おおや,landlord,n3
 丘,おか,"hill, height",n3
 沖,おき,open sea,n3
 奥,おく,"interior, inner part",n3
-贈る,おくる,"to present, to give to, to award to",n3
-起こる,おこる,"to occur, to happen",n3
-押える,おさえる,"to stop, to restrain, to press down",n3
+贈る,おくる," present,  give ,  award ",n3
+起こる,おこる," occur,  happen",n3
+押える,おさえる," stop,  restrain,  press down",n3
 幼い,おさない,"very young, childish",n3
-収める,おさめる,"to store to pay, to supply",n3
-納める,おさめる,"to store to pay, to supply",n3
-治める,おさめる,"to govern, to manage to subdue",n3
+収める,おさめる," store  pay,  supply",n3
+納める,おさめる," store  pay,  supply",n3
+治める,おさめる," govern,  manage  subdue",n3
 お辞儀,おじぎ,bow,n3
 お洒落,おしゃれ,"smartly dressed, fashionconscious",n3
 お喋り,おしゃべり,"chattering, talk",n3
 汚染,おせん,"pollution, contamination",n3
 恐らく,おそらく,perhaps,n3
-恐れる,おそれる,"to fear, to be afraid of",n3
+恐れる,おそれる," fear,  be afraid of",n3
 恐ろしい,おそろしい,"terrible, dreadful",n3
-教わる,おそわる,to be taught,n3
+教わる,おそわる, be taught,n3
 お互い,おたがい,"mutual, reciprocal, each other",n3
 穏やか,おだやか,"calm, gentle, quiet",n3
 男の人,おとこのひと,man,n3
 大人しい,おとなしい,"obedient, docile, quiet",n3
-劣る,おとる,"to fall behind, to be inferior to",n3
+劣る,おとる," fall behind,  be inferior ",n3
 鬼,おに,"ogre, demon, 'it' ,in a game of tag",n3
 帯,おび,"band, sash",n3
 お昼,おひる,"lunch, noon",n3
-溺れる,おぼれる,"to be drowned, to indulge in",n3
+溺れる,おぼれる," be drowned,  indulge in",n3
 お前,おまえ,"you sing, presence of a high personage",n3
 お目に掛かる,おめにかかる,"meet , see ",n3
-思い付く,おもいつく,"to think of, to hit upon",n3
+思い付く,おもいつく," think of,  hit upon",n3
 思い出,おもいで,"memories, recollections, reminiscence",n3
 主に,おもに,"mainly, primarily",n3
 思わず,おもわず,"unintentional, spontaneous",n3
 泳ぎ,およぎ,swimming,n3
-及ぼす,およぼす,"to exert, to cause, to exercise",n3
-下す,おろす,"to lower, to let go down",n3
-降ろす,おろす,"to take down, to launch, to drop",n3
-卸す,おろす,"to sell wholesale, grated vegetables",n3
+及ぼす,およぼす," exert,  cause,  exercise",n3
+下す,おろす," lower,  let go down",n3
+降ろす,おろす," take down,  launch,  drop",n3
+卸す,おろす," sell wholesale, grated vegetables",n3
 音,おん,"sound, note",n3
 恩,おん,"favor, obligation, debt of gratitude",n3
 温暖,おんだん,warmth,n3
@@ -498,23 +498,23 @@ expression,reading,meaning,tags
 改善,かいぜん,"betterment, improvement",n3
 快適,かいてき,"pleasant, agreeable",n3
 回復,かいふく,"recovery from illness, rehabilitation, restoration",n3
-飼う,かう,to keep to own a pet to raise to feed,n3
-帰す,かえす,to send back,n3
-代える,かえる,"to exchange, to interchange, to substitute",n3
-替える,かえる,"to exchange, to interchange, to substitute",n3
-換える,かえる,"to exchange, to interchange, to substitute",n3
-反る,かえる,"to warp, to be warped, to curve",n3
+飼う,かう, keep  own a pet  raise  feed,n3
+帰す,かえす, send back,n3
+代える,かえる," exchange,  interchange,  substitute",n3
+替える,かえる," exchange,  interchange,  substitute",n3
+換える,かえる," exchange,  interchange,  substitute",n3
+反る,かえる," warp,  be warped,  curve",n3
 香り,かおり,"aroma, fragrance",n3
 画家,がか,painter,n3
-抱える,かかえる,to hold or carry under or in the arms,n3
+抱える,かかえる, hold or carry under or in the arms,n3
 価格,かかく,"price, value",n3
 化学,かがく,chemistry,n3
-輝く,かがやく,"to shine, to glitter, to sparkle",n3
+輝く,かがやく," shine,  glitter,  sparkle",n3
 係,かかり,person in charge,n3
-罹る,かかる,to suffer from,n3
-限る,かぎる,"to restrict, to limit, to confine",n3
-掻く,かく,to scratch,n3
-嗅ぐ,かぐ,"to sniff, to smell",n3
+罹る,かかる, suffer from,n3
+限る,かぎる," restrict,  limit,  confine",n3
+掻く,かく, scratch,n3
+嗅ぐ,かぐ," sniff,  smell",n3
 家具,かぐ,furniture,n3
 学,がく,"learning, knowledge",n3
 額,がく,amount frame,n3
@@ -522,37 +522,37 @@ expression,reading,meaning,tags
 確実,かくじつ,"certainty, reliability, soundness",n3
 学者,がくしゃ,scholar,n3
 学習,がくしゅう,"study, learning",n3
-隠す,かくす,"to hide, to conceal",n3
+隠す,かくす," hide,  conceal",n3
 拡大,かくだい,"magnification, enlargement",n3
 確認,かくにん,"affirmation, confirmation",n3
 学問,がくもん,"scholarship, study, learning",n3
-隠れる,かくれる,"to hide, to be hidden",n3
+隠れる,かくれる," hide,  be hidden",n3
 影,かげ,"shade, shadow, other side",n3
 陰,かげ,"shade, shadow, other side",n3
-欠ける,かける,to be lacking,n3
+欠ける,かける, be lacking,n3
 加減,かげん,adjustment addition and subtraction,n3
 過去,かこ,past,n3
 籠,かご,"basket, cage",n3
-囲む,かこむ,"to surround, to encircle",n3
+囲む,かこむ," surround,  encircle",n3
 火災,かさい,"conflagration, fire",n3
-重なる,かさなる,"to be piled up, lie on top of one another",n3
-重ねる,かさねる,"to pile up, to put something on another, to heap up",n3
+重なる,かさなる," be piled up, lie on top of one another",n3
+重ねる,かさねる," pile up,  put something on another,  heap up",n3
 飾り,かざり,decoration,n3
 貸し,かし,"loan, lending",n3
 菓子,かし,"confectionery, sweet",n3
 家事,かじ,household matters housework same as  ,n3
 賢い,かしこい,"wise, clever, smart",n3
 歌手,かしゅ,singer,n3
-稼ぐ,かせぐ,"to earn income, to labor",n3
-数える,かぞえる,to count,n3
+稼ぐ,かせぐ," earn income,  labor",n3
+数える,かぞえる, count,n3
 型,かた,"mold, model, style",n3
 肩,かた,shoulder,n3
 堅い,かたい,"hard, firm, solid",n3
 硬い,かたい,"hard, firm, solid",n3
 方々,かたがた,persons,n3
-片付く,かたづく,"to put in order, to solve",n3
+片付く,かたづく," put in order,  solve",n3
 刀,かたな,"sword, saber",n3
-語る,かたる,"to talk, to tell, to recite",n3
+語る,かたる," talk,  tell,  recite",n3
 勝ち,かち,"win, victory",n3
 価値,かち,"value, worth, merit",n3
 活気,かっき,vigor liveliness vitality energy,n3
@@ -564,13 +564,13 @@ expression,reading,meaning,tags
 仮定,かてい,"assumption, supposition, hypothesis",n3
 過程,かてい,process,n3
 課程,かてい,"course, curriculum",n3
-悲しむ,かなしむ,"to be sad, to mourn for, to regret",n3
+悲しむ,かなしむ," be sad,  mourn for,  regret",n3
 必ずしも,かならずしも,"not always, not necessarily",n3
 金,かね,"gold, metal money",n3
 鐘,かね,"bell, chime",n3
 可能,かのう,"possible, practicable, feasible",n3
 株,かぶ,stock stump of tree,n3
-被る,かぶる,to wear to be covered with,n3
+被る,かぶる, wear  be covered with,n3
 我慢,がまん,"patience, endurance, perseverance",n3
 神,かみ,god,n3
 雷,かみなり,thunder,n3
@@ -579,15 +579,15 @@ expression,reading,meaning,tags
 歌謡,かよう,"song, ballad",n3
 空,から,empty,n3
 殻,から,"shell, husk, hull",n3
-刈る,かる,"to cut hair, to mow grass, to harvest",n3
+刈る,かる," cut hair,  mow grass,  harvest",n3
 河,かわ,"river, stream",n3
 皮,かわ,"skin, hide, leather",n3
 革,かわ,leather,n3
 可愛そう,かわいそう,"poor, pitiable, pathetic",n3
 可愛らしい,かわいらしい,"lovely, sweet",n3
-乾かす,かわかす,to dry,n3
-渇く,かわく,to be thirsty,n3
-代る,かわる,"to take the place of, to relieve, to be substituted for",n3
+乾かす,かわかす, dry,n3
+渇く,かわく, be thirsty,n3
+代る,かわる," take the place of,  relieve,  be substituted for",n3
 缶,かん,"can, tin",n3
 勘,かん,"perception, intuition, the sixth sense",n3
 考え,かんがえ,"thinking, thought, ideas",n3
@@ -603,10 +603,10 @@ expression,reading,meaning,tags
 患者,かんじゃ,patient,n3
 勘定,かんじょう,"calculation, counting, consideration",n3
 感情,かんじょう,"emotions, feelings, sentiment",n3
-感じる,かんじる,"to feel, to sense",n3
+感じる,かんじる," feel,  sense",n3
 感心,かんしん,admiration,n3
 関心,かんしん,"concern, interest",n3
-関する,かんする,"to concern, to be related",n3
+関する,かんする," concern,  be related",n3
 完成,かんせい,"complete, completion perfection",n3
 完全,かんぜん,"perfection, completeness",n3
 乾燥,かんそう,"dry, arid, dehydrated",n3
@@ -625,7 +625,7 @@ expression,reading,meaning,tags
 期間,きかん,"period, term",n3
 機関,きかん,"engine institution, organization",n3
 企業,きぎょう,"industry, business, undertaking",n3
-効く,きく,to be effective,n3
+効く,きく, be effective,n3
 期限,きげん,"deadline, term",n3
 機嫌,きげん,"humor, temper, mood",n3
 気候,きこう,climate,n3
@@ -640,8 +640,8 @@ expression,reading,meaning,tags
 帰宅,きたく,returning home,n3
 貴重,きちょう,"precious, valuable",n3
 議長,ぎちょう,chairman,n3
-気付く,きづく,"to notice, to recognize, to become aware of",n3
-気に入る,きにいる,"to like, to be please",n3
+気付く,きづく," notice,  recognize,  become aware of",n3
+気に入る,きにいる," like,  be please",n3
 記入,きにゅう,"entry, filling in of forms",n3
 記念,きねん,"commemoration, memory",n3
 機能,きのう,"function, faculty",n3
@@ -682,10 +682,10 @@ expression,reading,meaning,tags
 許可,きょか,"permission, approval",n3
 局,きょく,"office, bureau, stationtv, radio",n3
 巨大,きょだい,"huge, gigantic, enormous",n3
-嫌う,きらう,"to hate, to dislike, to loathe",n3
+嫌う,きらう," hate,  dislike,  loathe",n3
 霧,きり,"fog, mist",n3
 切れ,きれ,"cloth, piece, cut",n3
-切れる,きれる,"to cut well, to be sharp to break off",n3
+切れる,きれる," cut well,  be sharp  break off",n3
 記録,きろく,"record, minutes, document",n3
 議論,ぎろん,"argument, discussion, dispute",n3
 銀,ぎん,silver,n3
@@ -700,37 +700,37 @@ expression,reading,meaning,tags
 筋肉,きんにく,"muscle, sinews",n3
 金融,きんゆう,"finance, money and banking",n3
 句,く,phrase,n3
-食う,くう,male vulg to eat,n3
+食う,くう,male vulg  eat,n3
 偶然,ぐうぜん,"by chance, unexpectedly",n3
 臭い,くさい,"stinky, smelly, badsmelling",n3
 鎖,くさり,chain,n3
-腐る,くさる,"to rot, to go bad",n3
+腐る,くさる," rot,  go bad",n3
 癖,くせ,"a habit often a bad habit, peculiarity",n3
 管,くだ,"pipe, tube",n3
 具体,ぐたい,"concrete, tangible, material",n3
 下り,くだり,downtrain going away from tokyo,n3
-下る,くだる,"to get down, to descend",n3
+下る,くだる," get down,  descend",n3
 苦痛,くつう,"pain, agony",n3
 区別,くべつ,"distinction, differentiation, classification",n3
 組,くみ,"class, team, set",n3
 組合,くみあい,"association, union",n3
-組む,くむ,to put together,n3
-汲む,くむ,"to draw, to scoop, to pump",n3
-酌む,くむ,to serve sake,n3
+組む,くむ, put together,n3
+汲む,くむ," draw,  scoop,  pump",n3
+酌む,くむ, serve sake,n3
 悔しい,くやしい,"regrettable, mortifying, vexing",n3
 位,くらい,"grade, rank, about",n3
 暮らし,くらし,living life style,n3
-暮らす,くらす,"to live, to get along",n3
-繰り返す,くりかえす,"to repeat, to do something over again",n3
-狂う,くるう,"to go mad, to get out of order",n3
+暮らす,くらす," live,  get along",n3
+繰り返す,くりかえす," repeat,  do something over again",n3
+狂う,くるう," go mad,  get out of order",n3
 苦しい,くるしい,tough physically strenuous,n3
-苦しむ,くるしむ,"to suffer, to groan, to be worried",n3
+苦しむ,くるしむ," suffer,  groan,  be worried",n3
 暮れ,くれ,"year end,",n3
 苦労,くろう,hardship suffering,n3
-加える,くわえる,"to append, to sum up, to add up",n3
-咥える,くわえる,to hold something in the mouth,n3
+加える,くわえる," append,  sum up,  add up",n3
+咥える,くわえる, hold something in the mouth,n3
 詳しい,くわしい,detailed full accurate,n3
-加わる,くわわる,"to join in, to accede to",n3
+加わる,くわわる," join in,  accede ",n3
 訓,くん,native japanese reading of a chinese character,n3
 軍,ぐん,"army, force, troops",n3
 郡,ぐん,"country, district",n3
@@ -761,7 +761,7 @@ expression,reading,meaning,tags
 欠点,けってん,"faults, defect, weakness",n3
 結論,けつろん,conclusion,n3
 煙,けむり,"smoke, fumes",n3
-蹴る,ける,to kick,n3
+蹴る,ける, kick,n3
 券,けん,"ticket, certificate",n3
 県,けん,prefecture,n3
 見解,けんかい,"opinion, point of view",n3
@@ -815,10 +815,10 @@ expression,reading,meaning,tags
 公平,こうへい,"fairness, impartial, justice",n3
 候補,こうほ,candidacy,n3
 考慮,こうりょ,"consideration, taking into account",n3
-越える,こえる,"to exceed, to cross over, to cross",n3
-超える,こえる,"to exceed, to cross over, to cross",n3
+越える,こえる," exceed,  cross over,  cross",n3
+超える,こえる," exceed,  cross over,  cross",n3
 氷,こおり,"ice, hail",n3
-凍る,こおる,"to freeze, to be frozen over, to congeal",n3
+凍る,こおる," freeze,  be frozen over,  congeal",n3
 誤解,ごかい,misunderstanding,n3
 語学,ごがく,language study,n3
 呼吸,こきゅう,"breath, respiration",n3
@@ -833,25 +833,25 @@ expression,reading,meaning,tags
 腰,こし,"hip, waist",n3
 胡椒,こしょう,pepper,n3
 個人,こじん,"individual, private person",n3
-越す,こす,"to go over , with audience",n3
-超す,こす,"to cross, to pass, to tide over",n3
+越す,こす," go over , with audience",n3
+超す,こす," cross,  pass,  tide over",n3
 国家,こっか,"state, country, nation",n3
 国会,こっかい,"national diet, parliament, congress",n3
 国境,こっきょう,national or state border,n3
 骨折,こっせつ,bone fracture,n3
 小包,こづつみ,"parcel, package",n3
 琴,こと,japanese harp,n3
-異なる,ことなる,"to differ, to vary",n3
+異なる,ことなる," differ,  vary",n3
 諺,ことわざ,"proverb, saying",n3
-断る,ことわる,"to refuse, to decline, to dismiss",n3
+断る,ことわる," refuse,  decline,  dismiss",n3
 粉,こな,"flour, powder",n3
 好み,このみ,"liking, taste, choice",n3
-好む,このむ,"to like, to prefer",n3
+好む,このむ," like,  prefer",n3
 塵,ごみ,"garbage, litter",n3
 小麦,こむぎ,wheat,n3
 小屋,こや,"hut, cabin, shed",n3
-殺す,ころす,to kill,n3
-転ぶ,ころぶ,"to fall down, to fall over",n3
+殺す,ころす, kill,n3
+転ぶ,ころぶ," fall down,  fall over",n3
 今回,こんかい,"now, this time, lately",n3
 今後,こんご,"from now on, hereafter",n3
 混雑,こんざつ,"confusion, congestion",n3
@@ -871,34 +871,34 @@ expression,reading,meaning,tags
 材料,ざいりょう,"ingredients, material",n3
 幸い,さいわい,fortunately luckily,n3
 境,さかい,"border, boundary, mental state",n3
-逆らう,さからう,"to go against, to oppose, to disobey",n3
+逆らう,さからう," go against,  oppose,  disobey",n3
 盛り,さかり,"helping, serving",n3
 作業,さぎょう,"work, operation, manufacturing",n3
-裂く,さく,"to tear, to split",n3
+裂く,さく," tear,  split",n3
 昨,さく,"last year, yesterday",n3
 作品,さくひん,"work, opus, production",n3
 作物,さくもつ,"produce , agricultural, crops",n3
 桜,さくら,"cherry blossom, cherry tree",n3
 酒,さけ,"alcohol, sake",n3
-叫ぶ,さけぶ,"to shout, to cry",n3
-避ける,さける,"to avoid physical contact to ward off, to avert",n3
+叫ぶ,さけぶ," shout,  cry",n3
+避ける,さける," avoid physical contact  ward off,  avert",n3
 支える,ささえる,"support, hold, sustain",n3
-刺さる,ささる,"to stick, to be stuck",n3
-刺す,さす,"to sting, to bite , bug, to prick, to stab",n3
-指す,さす,"to point,",n3
-挿す,さす,"to insert, to put in, to graft",n3
-注す,さす,"to pour drink, to serve drinks",n3
-射す,さす,"to shine, to strike",n3
+刺さる,ささる," stick,  be stuck",n3
+刺す,さす," sting,  bite , bug,  prick,  stab",n3
+指す,さす," point,",n3
+挿す,さす," insert,  put in,  graft",n3
+注す,さす," pour drink,  serve drinks",n3
+射す,さす," shine,  strike",n3
 座席,ざせき,seat,n3
-誘う,さそう,"to invite someone to do something with you to tempt, to lure",n3
+誘う,さそう," invite someone  do something with you  tempt,  lure",n3
 札,さつ,"bill, note",n3
 作家,さっか,"author, writer, novelist",n3
 作曲,さっきょく,composition of music,n3
 砂漠,さばく,desert,n3
 差別,さべつ,"discrimination, differentiation",n3
 豆,まめ,"beans, peas",n3
-守る,まもる,to protect to abide by the rules,n3
-迷う,まよう,"to be puzzled, to be perplexed, to lose one's way",n3
+守る,まもる, protect  abide by the rules,n3
+迷う,まよう," be puzzled,  be perplexed,  lose one's way",n3
 丸,まる,"circle, full month",n3
 万一,まんいち,"by some chance, if by any chance",n3
 満足,まんぞく,satisfaction,n3
@@ -907,9 +907,9 @@ expression,reading,meaning,tags
 見送り,みおくり,seeing one off,n3
 味方,みかた,"ally, supporter",n3
 見事,みごと,"splendid, magnificent",n3
-満ちる,みちる,"to be full, to mature",n3
+満ちる,みちる," be full,  mature",n3
 密,みつ,"thick, close",n3
-認める,みとめる,"to recognize, to notice to approve",n3
+認める,みとめる," recognize,  notice  approve",n3
 見舞い,みまい,"expression of sympathy, expression of concern",n3
 土産,みやげ,souvenir,n3
 都,みやこ,city capital,n3
@@ -917,19 +917,19 @@ expression,reading,meaning,tags
 明後日,みょうごにち,day after tomorrow,n3
 未来,みらい,future life tense,n3
 魅力,みりょく,"charm, fascination, appeal",n3
-診る,みる,to examine a patient,n3
+診る,みる, examine a patient,n3
 無,む,"nothing, naught, zero",n3
 向かい,むかい,"facing, opposite, across",n3
-迎え,むかえ,"meeting, person sent to pick up an arrival",n3
-向く,むく,to face,n3
-剥く,むく,"to peel, to skin",n3
-向ける,むける,"to turn towards, to point",n3
+迎え,むかえ,"meeting, person sent  pick up an arrival",n3
+向く,むく, face,n3
+剥く,むく," peel,  skin",n3
+向ける,むける," turn towards,  point",n3
 無視,むし,"disregard, ignore",n3
 蒸し暑い,むしあつい,"humid, sultry",n3
 虫歯,むしば,"cavity, tooth decay",n3
 寧ろ,むしろ,"rather, better, instead",n3
-蒸す,むす,"to steam, to poultice, to be sultry",n3
-結ぶ,むすぶ,"to tie, to bind, to link",n3
+蒸す,むす," steam,  poultice,  be sultry",n3
+結ぶ,むすぶ," tie,  bind,  link",n3
 無駄,むだ,"futility, uselessness",n3
 夢中,むちゅう,"crush, crazy, be hooked on",n3
 胸,むね,"breast, chest",n3
@@ -938,7 +938,7 @@ expression,reading,meaning,tags
 明確,めいかく,"clear, definite",n3
 名刺,めいし,name card business card,n3
 名詞,めいし,noun,n3
-命じる,めいじる,"to order, to command, to appoint",n3
+命じる,めいじる," order,  command,  appoint",n3
 名人,めいじん,"master, expert",n3
 命令,めいれい,"order, command, decree",n3
 迷惑,めいわく,"trouble, bother, annoyance",n3
@@ -950,42 +950,42 @@ expression,reading,meaning,tags
 免許,めんきょ,"license, permit, certificate",n3
 面接,めんせつ,interview,n3
 面倒,めんどう,"trouble, attention",n3
-申し込む,もうしこむ,"to apply for, to make an application",n3
+申し込む,もうしこむ," apply for,  make an application",n3
 申し訳,もうしわけ,"apology, excuse",n3
 毛布,もうふ,blanket,n3
-燃える,もえる,to burn,n3
+燃える,もえる, burn,n3
 目的,もくてき,"purpose, goal, aim",n3
 目標,もくひょう,"mark, objective, target",n3
 文字,もじ,"letter of alphabet, character",n3
-持ち上げる,もちあげる,"to raise, to lift up, to flatter",n3
-用いる,もちいる,"to use, to make use of",n3
+持ち上げる,もちあげる," raise,  lift up,  flatter",n3
+用いる,もちいる," use,  make use of",n3
 尤も,もっとも,"quite right, plausible, natural",n3
 元,もと,"origin, original former",n3
 基,もと,basis,n3
 素,もと,prime,n3
-戻す,もどす,"to restore, to put back, to return",n3
-基づく,もとづく,"to be grounded on, to be based on",n3
-求める,もとめる,"to request, to ask for to seek, to search for",n3
+戻す,もどす," restore,  put back,  return",n3
+基づく,もとづく," be grounded on,  be based on",n3
+求める,もとめる," request,  ask for  seek,  search for",n3
 者,もの,person same as  ,n3
 物音,ものおと,sounds,n3
 物語,ものがたり,"tale, story, legend",n3
 物事,ものごと,"things, everything",n3
-燃やす,もやす,to burn,n3
+燃やす,もやす, burn,n3
 模様,もよう,"pattern, figure, design",n3
 文句,もんく,a complaint,n3
 役,やく,"role, position",n3
 約,やく,"approximately, about, some",n3
 訳,やく,translation,n3
-訳す,やくす,to translate,n3
+訳す,やくす, translate,n3
 役割,やくわり,"assigning allotment of parts, role, duties",n3
 家賃,やちん,rent,n3
 厄介,やっかい,"trouble, burden, care",n3
 宿,やど,"inn, lodging",n3
-雇う,やとう,"to employ, to hire",n3
+雇う,やとう," employ,  hire",n3
 屋根,やね,roof,n3
-破る,やぶる,to tear to violate to defeat,n3
-破れる,やぶれる,"to get torn, to wear out",n3
-辞める,やめる,to retire,n3
+破る,やぶる, tear  violate  defeat,n3
+破れる,やぶれる," get torn,  wear out",n3
+辞める,やめる, retire,n3
 唯一,ゆいいつ,"only, sole, unique",n3
 勇気,ゆうき,"courage, bravery, boldness",n3
 友好,ゆうこう,friendship,n3
@@ -999,13 +999,13 @@ expression,reading,meaning,tags
 有利,ゆうり,"advantageous, better",n3
 床,ゆか,floor,n3
 愉快,ゆかい,"pleasant, happy",n3
-譲る,ゆずる,"to turn over, to assign, to hand over",n3
+譲る,ゆずる," turn over,  assign,  hand over",n3
 豊か,ゆたか,"abundant, wealthy, plentiful, rich",n3
-茹でる,ゆでる,to boil,n3
-許す,ゆるす,"to permit, to allow, to approve",n3
+茹でる,ゆでる, boil,n3
+許す,ゆるす," permit,  allow,  approve",n3
 夜,よ,"evening, night",n3
 夜明け,よあけ,"dawn, daybreak",n3
-酔う,よう,to get drunk,n3
+酔う,よう, get drunk,n3
 容易,ようい,"easy, simple, plain",n3
 容器,ようき,"container, vessel",n3
 陽気,ようき,"season, weather, cheerfulness",n3
@@ -1017,11 +1017,11 @@ expression,reading,meaning,tags
 要点,ようてん,"gist, main point",n3
 曜日,ようび,day of the week,n3
 予期,よき,"expectation, forecast",n3
-横切る,よこぎる,"to cross , arms, to traverse",n3
-汚す,よごす,"to pollute, to make dirty",n3
+横切る,よこぎる," cross , arms,  traverse",n3
+汚す,よごす," pollute,  make dirty",n3
 予算,よさん,"estimate, budget",n3
-止す,よす,"to cease, to give up",n3
-寄せる,よせる,"to collect, to gather, to put aside",n3
+止す,よす," cease,  give up",n3
+寄せる,よせる," collect,  gather,  put aside",n3
 予測,よそく,"prediction, estimation",n3
 夜中,よなか,"midnight, dead of night",n3
 世の中,よのなか,"society, the world",n3
@@ -1031,7 +1031,7 @@ expression,reading,meaning,tags
 読み,よみ,reading,n3
 嫁,よめ,"bride, daughterinlaw",n3
 余裕,よゆう,excess surplus,n3
-因る,よる,to come from,n3
+因る,よる, come from,n3
 喜び,よろこび,"joy, pleasure, rejoicing",n3
 四,よん,four,n3
 来,らい,next ,n3
@@ -1060,19 +1060,19 @@ expression,reading,meaning,tags
 連続,れんぞく,"consecutive, continuity, continuing",n3
 老人,ろうじん,"the aged, old person",n3
 労働,ろうどう,"labor, work",n3
-論じる,ろんじる,"to argue, to discuss",n3
+論じる,ろんじる," argue,  discuss",n3
 論争,ろんそう,"controversy, dispute",n3
 論文,ろんぶん,"thesis, paper",n3
 輪,わ,"ring, hoop, circle",n3
 別れ,わかれ,"parting, separation, farewell",n3
-分かれる,わかれる,"to branch off, to diverge from",n3
+分かれる,わかれる," branch off,  diverge from",n3
 脇,わき,side,n3
-湧く,わく,"to boil, to grow hot",n3
-分ける,わける,"to divide, to separate",n3
+湧く,わく," boil,  grow hot",n3
+分ける,わける," divide,  separate",n3
 僅か,わずか,"only, merely, a little",n3
 話題,わだい,"topic, subject",n3
 笑い,わらい,"laugh, laughter, smile",n3
-割る,わる,"to divide, to break",n3
+割る,わる," divide,  break",n3
 悪口,わるくち,"abuse, insult",n3
 我々,われわれ,we,n3
 湾,わん,"bay, gulf, inlet",n3
@@ -1080,7 +1080,7 @@ expression,reading,meaning,tags
 碗,わん,bowl,n3
 悪,あく,"evil, vice",n3
 当り,あたり,"hit, success, reaching the mark",n3
-宛てる,あてる,"to address, to put",n3
+宛てる,あてる," address,  put",n3
 異,い,difference of opinion,n3
 意,い,will,n3
 医院,いいん,"doctor's office surgery, clinic",n3
@@ -1088,27 +1088,27 @@ expression,reading,meaning,tags
 粋,いき,"chic, style, purity",n3
 意地,いじ,"disposition, spirit, obstinacy, appetite",n3
 依然,いぜん,"still, as yet",n3
-傷める,いためる,"to damage, to impair, to spoil",n3
-炒める,いためる,to stirfry,n3
+傷める,いためる," damage,  impair,  spoil",n3
+炒める,いためる, stirfry,n3
 一帯,いったい,"a region, the whole place",n3
 異動,いどう,"a change, transfer",n3
 衣料,いりょう,clothing,n3
 渦,うず,swirl,n3
-埋まる,うまる,"to be buried, to be filled",n3
-産む,うむ,"to give birth , to deliver, to produce",n3
+埋まる,うまる," be buried,  be filled",n3
+産む,うむ," give birth ,  deliver,  produce",n3
 縁,えん,"chance, tie, relationship",n3
 尾,お,"tail, ridge",n3
-負う,おう,"to bear, to owe",n3
+負う,おう," bear,  owe",n3
 遅れ,おくれ,"delay, lag",n3
 教え,おしえ,"teachings, doctrine",n3
 驚き,おどろき,"surprise, astonishment, wonder",n3
-織る,おる,to weave,n3
-欠く,かく,"to lack, to crack",n3
+織る,おる, weave,n3
+欠く,かく," lack,  crack",n3
 核,かく,"nucleus, kernel",n3
 格,かく,"status, character, case",n3
 学歴,がくれき,academic background,n3
-駆ける,かける,to run,n3
-賭ける,かける,"to bet, to risk, to gamble",n3
+駆ける,かける, run,n3
+賭ける,かける," bet,  risk,  gamble",n3
 課題,かだい,"subject, theme, task",n3
 片付け,かたづけ,"tidying up, finishing",n3
 加味,かみ,"seasoning, flavoring",n3
@@ -1124,13 +1124,13 @@ expression,reading,meaning,tags
 季刊,きかん,"quarterly , magazine",n3
 起源,きげん,"origin, beginning, rise",n3
 機構,きこう,"mechanism, organization",n3
-築く,きずく,"to build, to establish",n3
+築く,きずく," build,  establish",n3
 規制,きせい,regulation,n3
 丘陵,きゅうりょう,hill,n3
 協議,きょうぎ,"conference, discussion, negotiation",n3
 享受,きょうじゅ,"enjoyment, being given",n3
 協調,きょうちょう,"cooperation, conciliation, harmony",n3
-切り,きり,"limits, place to leave off",n3
+切り,きり,"limits, place  leave off",n3
 菌,きん,"germ, bacterium",n3
 近視,きんし,nearsightedness,n3
 苦,く,"trouble, worry, difficulty",n3
@@ -1162,8 +1162,8 @@ expression,reading,meaning,tags
 設備,せつび,"equipment, device, facilities",n3
 絶滅,ぜつめつ,"destruction, extinction",n3
 節約,せつやく,"economizing, saving",n3
-攻める,せめる,"to attack, to assault",n3
-責める,せめる,"to condemn, to blame, to criticize",n3
+攻める,せめる," attack,  assault",n3
+責める,せめる," condemn,  blame,  criticize",n3
 善,ぜん,"good, virtue",n3
 全,ぜん,"all, whole, entire",n3
 全員,ぜんいん,all members,n3
@@ -1189,15 +1189,15 @@ expression,reading,meaning,tags
 速度,そくど,"speed, velocity, rate",n3
 底,そこ,"bottom, sole",n3
 組織,そしき,organization structure tissue,n3
-注ぐ,そそぐ,to pour into,n3
-育つ,そだつ,"to be brought up, to grow up",n3
+注ぐ,そそぐ, pour into,n3
+育つ,そだつ," be brought up,  grow up",n3
 袖,そで,sleeve,n3
-備える,そなえる,"to prepare, to furnish, to store",n3
-具える,そなえる,to be furnished with,n3
+備える,そなえる," prepare,  furnish,  store",n3
+具える,そなえる, be furnished with,n3
 蕎麦,そば,soba buckwheat noodles,n3
 粗末,そまつ,"humble, miserable, crude",n3
-揃う,そろう,"to become complete, to be equal",n3
-揃える,そろえる,"to put things in order, to arrange",n3
+揃う,そろう," become complete,  be equal",n3
+揃える,そろえる," put things in order,  arrange",n3
 損,そん,"loss, disadvantage",n3
 損害,そんがい,"damage, loss",n3
 尊敬,そんけい,"respect, reverence, honor",n3
@@ -1221,7 +1221,7 @@ expression,reading,meaning,tags
 対象,たいしょう,"target object of worship, study, etc subject ie, of taxation",n3
 対照,たいしょう,"contrast, antithesis, comparison",n3
 大臣,だいじん,cabinet minister,n3
-対する,たいする,"to face, to confront, to oppose",n3
+対する,たいする," face,  confront,  oppose",n3
 大戦,たいせん,"great war, great battle",n3
 態度,たいど,"attitude, manner",n3
 大統領,だいとうりょう,president,n3
@@ -1234,29 +1234,29 @@ expression,reading,meaning,tags
 平ら,たいら,"flatness, level, smooth",n3
 代理,だいり,"representation, proxy, deputy",n3
 大陸,たいりく,continent,n3
-倒す,たおす,"to throw down, to beat",n3
+倒す,たおす," throw down,  beat",n3
 互い,たがい,"mutual, each other",n3
-高める,たかめる,"to raise, to lift, to boost",n3
+高める,たかめる," raise,  lift,  boost",n3
 宝,たから,treasure,n3
 宅,たく,"house, home",n3
-炊く,たく,"to boil, to cook",n3
-焚く,たく,"to burn, to kindle, to build a fire",n3
-確かめる,たしかめる,"to ascertain, to make sure",n3
+炊く,たく," boil,  cook",n3
+焚く,たく," burn,  kindle,  build a fire",n3
+確かめる,たしかめる," ascertain,  make sure",n3
 多少,たしょう,a little same as  ,n3
-助かる,たすかる,to be saved something helps ,n3
-助ける,たすける,"to help , to save, to rescue",n3
+助かる,たすかる, be saved something helps ,n3
+助ける,たすける," help ,  save,  rescue",n3
 只,ただ,"free of charge, mere, only",n3
 唯,ただ,"mere, sole, plain",n3
 戦い,たたかい,"battle, fight",n3
-戦う,たたかう,"to fight, to compete, to battle",n3
-叩く,たたく,"to strike, to beat",n3
+戦う,たたかう," fight,  compete,  battle",n3
+叩く,たたく," strike,  beat",n3
 直ちに,ただちに,"at once, immediately",n3
-畳む,たたむ,to fold clothes,n3
-立ち上がる,たちあがる,to stand up,n3
+畳む,たたむ, fold clothes,n3
+立ち上がる,たちあがる, stand up,n3
 立場,たちば,"standpoint, position, situation",n3
-建つ,たつ,"to stand to be built , to erect, to be erected",n3
+建つ,たつ," stand  be built ,  erect,  be erected",n3
 経つ,たつ,time passes,n3
-達する,たっする,"to reach, to get to",n3
+達する,たっする," reach,  get ",n3
 谷,たに,valley,n3
 他人,たにん,"unrelated person, stranger",n3
 種,たね,seed material cause,n3
@@ -1267,15 +1267,15 @@ expression,reading,meaning,tags
 玉,たま,"ball, sphere, coin",n3
 弾,たま,"bullet, shot",n3
 偶,たま,"even number, couple, friend",n3
-騙す,だます,"to trick, to cheat, to deceive",n3
+騙す,だます," trick,  cheat,  deceive",n3
 偶々,たまたま,"unexpectedly, accidentally, by chance",n3
-溜まる,たまる,"to collect, to gather, to accumulate",n3
-黙る,だまる,to be silent,n3
+溜まる,たまる," collect,  gather,  accumulate",n3
+黙る,だまる, be silent,n3
 試し,ためし,"trial, test",n3
-試す,ためす,"to attempt, to test",n3
-溜める,ためる,"to accumulate, to collect",n3
+試す,ためす," attempt,  test",n3
+溜める,ためる," accumulate,  collect",n3
 便り,たより,"news, correspondence, letter",n3
-頼る,たよる,"to rely on, to have recourse to, to depend on",n3
+頼る,たよる," rely on,  have recourse ,  depend on",n3
 段,だん,"step, stair, grade",n3
 単位,たんい,"credit for a course in school unit, denomination",n3
 単語,たんご,word vocabulary,n3
@@ -1322,44 +1322,44 @@ expression,reading,meaning,tags
 貯金,ちょきん,bank savings,n3
 直接,ちょくせつ,"direct, immediate, firsthand",n3
 著者,ちょしゃ,"author, writer",n3
-散らす,ちらす,"to scatter, to disperse, to distribute",n3
-散る,ちる,"to fall, to scatter , blossoms",n3
+散らす,ちらす," scatter,  disperse,  distribute",n3
+散る,ちる," fall,  scatter , blossoms",n3
 遂に,ついに,"finally, at last",n3
 通過,つうか,"passage through, passing",n3
 通貨,つうか,currency,n3
-通学,つうがく,commuting to school,n3
-通勤,つうきん,commuting to work,n3
+通学,つうがく,commuting  school,n3
+通勤,つうきん,commuting  work,n3
 通行,つうこう,"passage, passing",n3
-通じる,つうじる,"to run to, to lead to, to communicate",n3
+通じる,つうじる," run ,  lead ,  communicate",n3
 通信,つうしん,"correspondence, communications",n3
 通訳,つうやく,interpretation interpreter,n3
-捕まる,つかまる,to be arrested to be caught,n3
-掴む,つかむ,"to seize, to catch, to grasp",n3
+捕まる,つかまる, be arrested  be caught,n3
+掴む,つかむ," seize,  catch,  grasp",n3
 疲れ,つかれ,"tiredness, fatigue",n3
 付き合い,つきあい,socialization friendship association,n3
-付合う,つきあう,"to associate with, to keep company with, to get on with",n3
+付合う,つきあう," associate with,  keep company with,  get on with",n3
 次々,つぎつぎ,"in succession, one by one",n3
-付く,つく,"to adjoin, to be attached, to adhere",n3
-就く,つく,"to settle in place, to take seat position, to study under teacher",n3
-突く,つく,"to thrust, to strike to poke",n3
-次ぐ,つぐ,"to rank next to, to come after",n3
-付ける,つける,"to attach, to join, to add",n3
-着ける,つける,"to put on, to wear to draw up",n3
-伝わる,つたわる,"to be handed down, to be transmitted",n3
+付く,つく," adjoin,  be attached,  adhere",n3
+就く,つく," settle in place,  take seat position,  study under teacher",n3
+突く,つく," thrust,  strike  poke",n3
+次ぐ,つぐ," rank next ,  come after",n3
+付ける,つける," attach,  join,  add",n3
+着ける,つける," put on,  wear  draw up",n3
+伝わる,つたわる," be handed down,  be transmitted",n3
 土,つち,"earth, soil",n3
 続き,つづき,"sequel, continuation",n3
 包み,つつみ,"bundle, package",n3
 勤め,つとめ,"work, employment",n3
 務め,つとめ,duty,n3
-繋がる,つながる,"to be connected to, to be related to",n3
-繋ぐ,つなぐ,"to tie, to fasten, to connect",n3
-繋げる,つなげる,to connect,n3
+繋がる,つながる," be connected ,  be related ",n3
+繋ぐ,つなぐ," tie,  fasten,  connect",n3
+繋げる,つなげる, connect,n3
 常に,つねに,always same as  written expression,n3
 翼,つばさ,wings,n3
 罪,つみ,"crime, fault, indiscretion",n3
-積む,つむ,"to pile up, to stack",n3
-詰める,つめる,"to pack, to shorten, to work out details",n3
-積もる,つもる,to pile up,n3
+積む,つむ," pile up,  stack",n3
+詰める,つめる," pack,  shorten,  work out details",n3
+積もる,つもる, pile up,n3
 梅雨,つゆ,rainy season,n3
 辛い,つらい,"painful, heartbreaking",n3
 釣,つり,fishing,n3
@@ -1367,7 +1367,7 @@ expression,reading,meaning,tags
 出,で,"outflow, coming going out, graduate of",n3
 出会い,であい,"meeting, rendezvous, encounter",n3
 出合い,であい,an encounter,n3
-出会う,であう,"to meet by chance, to come across, to happen to encounter",n3
+出会う,であう," meet by chance,  come across,  happen  encounter",n3
 提案,ていあん,"proposal, proposition, suggestion",n3
 定期,ていき,fixed term,n3
 抵抗,ていこう,"resistance, opposition",n3
@@ -1377,7 +1377,7 @@ expression,reading,meaning,tags
 停留所,ていりゅうじょ,bus or tram stop,n3
 敵,てき,"enemy, rival",n3
 出来事,できごと,"incident happening, event",n3
-適する,てきする,"to fit, to suit",n3
+適する,てきする," fit,  suit",n3
 適切,てきせつ,"appropriate, adequate, relevance",n3
 適度,てきど,moderate,n3
 適用,てきよう,applying,n3
@@ -1411,12 +1411,12 @@ expression,reading,meaning,tags
 童謡,どうよう,"children's song, nursery rhyme",n3
 同僚,どうりょう,colleague coworker,n3
 道路,どうろ,road,n3
-通す,とおす,"to let pass, to overlook, to continue",n3
-通り過ぎる,とおりすぎる,"to pass, to pass through",n3
+通す,とおす," let pass,  overlook,  continue",n3
+通り過ぎる,とおりすぎる," pass,  pass through",n3
 都会,とかい,city,n3
-溶く,とく,to dissolve paint,n3
-解く,とく,"to unfasten answer, solve",n3
-退く,どく,"to retreat, to recede, to withdraw",n3
+溶く,とく, dissolve paint,n3
+解く,とく," unfasten answer, solve",n3
+退く,どく," retreat,  recede,  withdraw",n3
 毒,どく,"poison, toxicant",n3
 得意,とくい,"pride, triumph, prosperity",n3
 読書,どくしょ,reading,n3
@@ -1425,80 +1425,80 @@ expression,reading,meaning,tags
 特長,とくちょう,"forte, merit",n3
 独特,どくとく,"peculiarity, uniqueness, characteristic",n3
 独立,どくりつ,"independence , ind day, selfsupport",n3
-溶ける,とける,"to melt, to thaw, to dissolve",n3
-解ける,とける,"to come untied, to come apart",n3
+溶ける,とける," melt,  thaw,  dissolve",n3
+解ける,とける," come untied,  come apart",n3
 登山,とざん,mountainclimbing,n3
 都市,とし,"town, city, urban",n3
 年月,としつき,months and years,n3
 図書,としょ,books,n3
 年寄,としより,"old people, the aged",n3
-閉じる,とじる,"to close , book, eyes, to shut",n3
+閉じる,とじる," close , book, eyes,  shut",n3
 途端,とたん,"just now, at the moment, etc",n3
 土地,とち,"plot of land, lot, soil",n3
 突然,とつぜん,"abruptly, suddenly, unexpectedly",n3
-届く,とどく,to reach,n3
-飛ばす,とばす,"to skip over, to omit",n3
-飛び出す,とびだす,"to jump out, to rush out, to fly out",n3
-留める,とめる,"to fasten, to turn off, to detain",n3
-泊める,とめる,to have someone stay over night ,n3
+届く,とどく, reach,n3
+飛ばす,とばす," skip over,  omit",n3
+飛び出す,とびだす," jump out,  rush out,  fly out",n3
+留める,とめる," fasten,  turn off,  detain",n3
+泊める,とめる, have someone stay over night ,n3
 友,とも,"friend, companion, pal",n3
 共に,ともに,"sharing with, participate in",n3
 虎,とら,tiger,n3
-取り上げる,とりあげる,"to take up, to pick up to confiscate",n3
+取り上げる,とりあげる," take up,  pick up  confiscate",n3
 努力,どりょく,"great effort, exertion, endeavor",n3
-取れる,とれる,"to come off, to be taken off",n3
+取れる,とれる," come off,  be taken off",n3
 泥,どろ,mud,n3
 名,な,"name, reputation",n3
 内容,ないよう,"subject, contents, detail",n3
 仲,なか,"relation, relationship",n3
-流す,ながす,"to drain, to float, to shed , blood, tears",n3
+流す,ながす," drain,  float,  shed , blood, tears",n3
 半ば,なかば,"middle, halfway",n3
 仲間,なかま,"company, fellow, colleague, associate",n3
 中身,なかみ,contents substance,n3
 中味,なかみ,"contents, interior, filling",n3
 眺め,ながめ,scene view prospect outlook,n3
-眺める,ながめる,"to view, to gaze at",n3
+眺める,ながめる," view,  gaze at",n3
 流れ,ながれ,"stream, current",n3
-流れる,ながれる,"to flow, to be washed away",n3
-亡くす,なくす,to lose someone,n3
-殴る,なぐる,to strike to hit to punch,n3
+流れる,ながれる," flow,  be washed away",n3
+亡くす,なくす, lose someone,n3
+殴る,なぐる, strike  hit  punch,n3
 無し,なし,without,n3
 謎,なぞ,"riddle, puzzle, enigma",n3
 納得,なっとく,"consent, assent, understanding",n3
 何か,なにか,something,n3
 鍋,なべ,"saucepan, pot",n3
-怠ける,なまける,"to be idle, to neglect",n3
+怠ける,なまける," be idle,  neglect",n3
 波,なみ,wave,n3
 涙,なみだ,tear,n3
-悩む,なやむ,"to agonize, to be troubled",n3
-鳴らす,ならす,"to ring, to sound",n3
-生る,なる,to bear fruit,n3
-馴れる,なれる,"to become domesticated, to become tame",n3
+悩む,なやむ," agonize,  be troubled",n3
+鳴らす,ならす," ring,  sound",n3
+生る,なる, bear fruit,n3
+馴れる,なれる," become domesticated,  become tame",n3
 縄,なわ,rope,n3
 何で,なんで,"why, what for",n3
 何でも,なんでも,"by all means, everything",n3
 何とか,なんとか,"somehow, anyhow, one way or another",n3
-似合う,にあう,"to suit a person, to match clothing, something becomes someone",n3
-煮える,にえる,"to boil, to cook, to be cooked",n3
+似合う,にあう," suit a person,  match clothing, something becomes someone",n3
+煮える,にえる," boil,  cook,  be cooked",n3
 苦手,にがて,"poor at, weak in, dislike of",n3
-握る,にぎる,"to grasp, to seize, to mold sushi",n3
+握る,にぎる," grasp,  seize,  mold sushi",n3
 日,にち,day,n3
 日常,にちじょう,"ordinary, regular, everyday",n3
 日光,にっこう,sunlight,n3
 日中,にっちゅう,"daytime, broad daylight",n3
 日本,にっぽん,japan,n3
 入場,にゅうじょう,"entrance, admission, entering",n3
-煮る,にる,"to boil, to cook",n3
+煮る,にる," boil,  cook",n3
 人気,にんき,popularity,n3
 人間,にんげん,"human being, person",n3
-抜く,ぬく,"to extract, to omit, to unplug",n3
-抜ける,ぬける,"to come out, to fall out, to be omitted",n3
+抜く,ぬく," extract,  omit,  unplug",n3
+抜ける,ぬける," come out,  fall out,  be omitted",n3
 布,ぬの,cloth,n3
-濡らす,ぬらす,"to wet, to soak",n3
+濡らす,ぬらす," wet,  soak",n3
 根,ね,root,n3
 値,ね,"value, price, cost",n3
 願い,ねがい,"desire, wish, request",n3
-願う,ねがう,"to desire, to wish, to request",n3
+願う,ねがう," desire,  wish,  request",n3
 鼠,ねずみ,"mouse, rat",n3
 熱帯,ねったい,tropics,n3
 熱中,ねっちゅう,"enthusiasm, zeal, mania",n3
@@ -1513,35 +1513,35 @@ expression,reading,meaning,tags
 農民,のうみん,"farmers, peasants",n3
 能力,のうりょく,"ability, faculty",n3
 軒,のき,eaves,n3
-残す,のこす,"to leave behind, over, to save, to reserve",n3
+残す,のこす," leave behind, over,  save,  reserve",n3
 残り,のこり,"remaining, leftover",n3
-乗せる,のせる,"to place on something, to take on board",n3
-載せる,のせる,to place on something to publish,n3
-覗く,のぞく,"to peek in, to look in",n3
-除く,のぞく,"to remove, to exclude, to except",n3
+乗せる,のせる," place on something,  take on board",n3
+載せる,のせる, place on something  publish,n3
+覗く,のぞく," peek in,  look in",n3
+除く,のぞく," remove,  exclude,  except",n3
 望み,のぞみ,"wish, desire, a hope",n3
-望む,のぞむ,"to desire, to wish for to view",n3
-伸ばす,のばす,"to extend, to stretch, to reach out",n3
-延ばす,のばす,"to extend, to stretch, to reach out",n3
-伸びる,のびる,"to extend, to make progress, to grow",n3
-延びる,のびる,to be prolonged,n3
-述べる,のべる,"to state, to express, to mention",n3
-上る,のぼる,"to ascend, to go up, to climb",n3
-昇る,のぼる,"to arise, to ascend, to go up",n3
-載る,のる,"to appear in print, to be recorded",n3
+望む,のぞむ," desire,  wish for  view",n3
+伸ばす,のばす," extend,  stretch,  reach out",n3
+延ばす,のばす," extend,  stretch,  reach out",n3
+伸びる,のびる," extend,  make progress,  grow",n3
+延びる,のびる, be prolonged,n3
+述べる,のべる," state,  express,  mention",n3
+上る,のぼる," ascend,  go up,  climb",n3
+昇る,のぼる," arise,  ascend,  go up",n3
+載る,のる," appear in print,  be recorded",n3
 場,ば,"place, field physics",n3
 灰,はい,ash,n3
 配達,はいたつ,"delivery, distribution",n3
 俳優,はいゆう,"actor, actress, performer",n3
-生える,はえる,"to grow, to spring up to cut teeth",n3
+生える,はえる," grow,  spring up  cut teeth",n3
 墓,はか,"grave, tomb",n3
 馬鹿,ばか,"fool, idiot",n3
 博士,はかせ,"doctorate, phd, doctor",n3
-計る,はかる,"to measure, to weigh, to survey",n3
-量る,はかる,"to measure, to weigh, to survey",n3
-測る,はかる,"to measure, to weigh, to survey",n3
-掃く,はく,"to sweep, to brush, to gather up",n3
-吐く,はく,"to throw up, to vomit",n3
+計る,はかる," measure,  weigh,  survey",n3
+量る,はかる," measure,  weigh,  survey",n3
+測る,はかる," measure,  weigh,  survey",n3
+掃く,はく," sweep,  brush,  gather up",n3
+吐く,はく," throw up,  vomit",n3
 拍手,はくしゅ,"clapping hands, applause",n3
 莫大,ばくだい,"enormous, vast",n3
 爆発,ばくはつ,"explosion, detonation, eruption",n3
@@ -1550,8 +1550,8 @@ expression,reading,meaning,tags
 破産,はさん,personal bankruptcy,n3
 端,はし,"end , of street, edge, margin",n3
 始まり,はじまり,"origin, beginning",n3
-外す,はずす,"to unfasten, to remove",n3
-外れる,はずれる,"to be disconnected, to be out , of gear",n3
+外す,はずす," unfasten,  remove",n3
+外れる,はずれる," be disconnected,  be out , of gear",n3
 旗,はた,flag,n3
 肌,はだ,skin,n3
 裸,はだか,"naked, nude",n3
@@ -1561,24 +1561,24 @@ expression,reading,meaning,tags
 発行,はっこう,issue publications,n3
 発車,はっしゃ,departure of a vehicle,n3
 発射,はっしゃ,"firing, shooting, discharge",n3
-罰する,ばっする,"to punish, to penalize",n3
+罰する,ばっする," punish,  penalize",n3
 発達,はったつ,"development, growth",n3
 発展,はってん,"development, growth, progress",n3
 発表,はっぴょう,announcement publication presentation,n3
 発明,はつめい,invention,n3
 派手,はで,"showy, flashy, gaudy",n3
-話し合う,はなしあう,"to discuss, to talk together",n3
-離す,はなす,"to part, to separate",n3
-放す,はなす,"to separate, to set free",n3
-離れる,はなれる,"something, someone separates parts from to be apart",n3
-放れる,はなれる,"to leave, to get free, to cut oneself off",n3
+話し合う,はなしあう," discuss,  talk together",n3
+離す,はなす," part,  separate",n3
+放す,はなす," separate,  set free",n3
+離れる,はなれる,"something, someone separates parts from  be apart",n3
+放れる,はなれる," leave,  get free,  cut oneself off",n3
 羽,はね,wing,n3
 羽根,はね,feather,n3
 幅,はば,"width, breadth",n3
 母親,ははおや,mother,n3
-省く,はぶく,"to omit, to eliminate",n3
+省く,はぶく," omit,  eliminate",n3
 場面,ばめん,"scene, setting , of novel",n3
-流行る,はやる,"to be popular, to come into fashion",n3
+流行る,はやる," be popular,  come into fashion",n3
 腹,はら,"abdomen, belly, stomach",n3
 原,はら,"field, plain",n3
 針,はり,"needle, hand , clock",n3
@@ -1600,7 +1600,7 @@ expression,reading,meaning,tags
 日付,ひづけ,"date, dating",n3
 引越し,ひっこし,"moving, changing residence",n3
 必死,ひっし,"desperation, frantic, inevitable result",n3
-引っ張る,ひっぱる,"to pull, to stretch, to drag",n3
+引っ張る,ひっぱる," pull,  stretch,  drag",n3
 否定,ひてい,"negation, denial",n3
 一言,ひとこと,one word,n3
 人込み,ひとごみ,crowd of people,n3
@@ -1612,7 +1612,7 @@ expression,reading,meaning,tags
 秘密,ひみつ,"secret, secrecy",n3
 微妙,びみょう,"delicate, subtle",n3
 紐,ひも,"string, cord",n3
-冷やす,ひやす,"to cool, to refrigerate",n3
+冷やす,ひやす," cool,  refrigerate",n3
 費用,ひよう,"cost, expense",n3
 表,ひょう,"table , tab 1, chart, list",n3
 秒,びょう,second 60th min,n3
@@ -1622,9 +1622,9 @@ expression,reading,meaning,tags
 平等,びょうどう,"equality, impartiality, evenness",n3
 評判,ひょうばん,"fame, reputation",n3
 表面,ひょうめん,"surface, outside, face",n3
-広がる,ひろがる,"to spread out, to extend, to stretch, to reach to, to get around",n3
-広げる,ひろげる,"to spread, to extend, to expand, to enlarge",n3
-広める,ひろめる,"to broaden, to propagate",n3
+広がる,ひろがる," spread out,  extend,  stretch,  reach ,  get around",n3
+広げる,ひろげる," spread,  extend,  expand,  enlarge",n3
+広める,ひろめる," broaden,  propagate",n3
 瓶,びん,bottle,n3
 便,びん,"way, means flight",n3
 不,ふ,"un, non, negative prefix",n3
@@ -1634,12 +1634,12 @@ expression,reading,meaning,tags
 夫婦,ふうふ,"married couple, husband and wife",n3
 笛,ふえ,"flute, whistle",n3
 不可,ふか,"wrong, bad, impossible",n3
-深まる,ふかまる,to deepen,n3
+深まる,ふかまる, deepen,n3
 武器,ぶき,"weapon, arms",n3
-拭く,ふく,"to wipe, to dry",n3
+拭く,ふく," wipe,  dry",n3
 服装,ふくそう,"clothes, attire",n3
-含む,ふくむ,"to contain, to include",n3
-含める,ふくめる,to include,n3
+含む,ふくむ," contain,  include",n3
+含める,ふくめる, include,n3
 袋,ふくろ,"bag, sack",n3
 不幸,ふこう,"unhappiness, sorrow, misfortune",n3
 節,ふし,"tune, tone, knob",n3
@@ -1649,13 +1649,13 @@ expression,reading,meaning,tags
 夫人,ふじん,"wife, mrs, madam",n3
 婦人,ふじん,woman same as  、 ,n3
 不正,ふせい,"injustice, unfairness",n3
-防ぐ,ふせぐ,"to defend against, to protect, to prevent",n3
+防ぐ,ふせぐ," defend against,  protect,  prevent",n3
 不足,ふそく,"insufficiency, shortage",n3
 舞台,ぶたい,stage theater,n3
 双子,ふたご,"twins, a twin",n3
 再び,ふたたび,"again, once more, a second time",n3
 普段,ふだん,"in everyday situations, usually, ordinarily",n3
-打つ,ぶつ,"to hit, to strike",n3
+打つ,ぶつ," hit,  strike",n3
 不通,ふつう,"blockade, interruption, stoppage",n3
 物価,ぶっか,commodity/consumer prices,n3
 物質,ぶっしつ,"material, substance",n3
@@ -1664,12 +1664,12 @@ expression,reading,meaning,tags
 部分,ぶぶん,"portion, section, part",n3
 不平,ふへい,"complaint, discontent, dissatisfaction",n3
 不満,ふまん,"dissatisfaction, discontent, complaints",n3
-増やす,ふやす,"to increase , to add to",n3
-殖やす,ふやす,"to increase, to add to",n3
+増やす,ふやす," increase ,  add ",n3
+殖やす,ふやす," increase,  add ",n3
 不利,ふり,"disadvantage, drawback",n3
-振る,ふる,"to wave, to shake to sprinkle to cast actor",n3
-震える,ふるえる,"to shiver, to shake, to quake",n3
-触れる,ふれる,"to touch, to feel, to violate",n3
+振る,ふる," wave,  shake  sprinkle  cast actor",n3
+震える,ふるえる," shiver,  shake,  quake",n3
+触れる,ふれる," touch,  feel,  violate",n3
 文,ぶん,sentence,n3
 雰囲気,ふんいき,"atmosphere , musical, mood, ambiance",n3
 分析,ぶんせき,analysis,n3
@@ -1679,8 +1679,8 @@ expression,reading,meaning,tags
 平均,へいきん,"equilibrium, balance, average",n3
 平和,へいわ,peace,n3
 別に,べつに,"not particularly, nothing",n3
-減らす,へらす,"to decrease, to diminish",n3
-減る,へる,"to decrease in size or number, to diminish",n3
+減らす,へらす," decrease,  diminish",n3
+減る,へる," decrease in size or number,  diminish",n3
 変化,へんか,"change, variation, shift",n3
 変更,へんこう,"change, modification, alteration",n3
 弁当,べんとう,box lunch,n3
@@ -1695,7 +1695,7 @@ expression,reading,meaning,tags
 豊富,ほうふ,"abundance, plenty",n3
 方法,ほうほう,"method, means, technique",n3
 訪問,ほうもん,"call, visit",n3
-吠える,ほえる,"to bark, to howl",n3
+吠える,ほえる," bark,  howl",n3
 誇り,ほこり,pride,n3
 埃,ほこり,dust,n3
 保証,ほしょう,"guarantee, assurance, warranty",n3
@@ -1705,7 +1705,7 @@ expression,reading,meaning,tags
 骨,ほね,bone,n3
 炎,ほのお,flame,n3
 頬,ほほ,cheek of face,n3
-微笑む,ほほえむ,to smile,n3
+微笑む,ほほえむ, smile,n3
 堀,ほり,"moat, canal",n3
 濠,ほり,moat,n3
 本当,ほんと,"truth, reality",n3
@@ -1713,33 +1713,33 @@ expression,reading,meaning,tags
 本物,ほんもの,genuine article,n3
 間,ま,"space, room, pause",n3
 迷子,まいご,lost stray child,n3
-任せる,まかせる,"to entrust to another, to leave to",n3
-巻く,まく,"to wind, to coil, to roll",n3
-蒔く,まく,to sow seeds,n3
-撒く,まく,"to scatter, to sprinkle, to sow",n3
+任せる,まかせる," entrust  another,  leave ",n3
+巻く,まく," wind,  coil,  roll",n3
+蒔く,まく, sow seeds,n3
+撒く,まく," scatter,  sprinkle,  sow",n3
 幕,まく,"curtain, act in play",n3
 負け,まけ,"defeat, loss",n3
 孫,まご,grandchild,n3
-混ざる,まざる,"to be mixed, to mingle with",n3
-交ざる,まざる,"to be mixed, to mingle with",n3
-混じる,まじる,"to be mixed, to mingle with",n3
-交じる,まじる,"to be mixed, to mingle with",n3
-増す,ます,"to increase, to gain",n3
+混ざる,まざる," be mixed,  mingle with",n3
+交ざる,まざる," be mixed,  mingle with",n3
+混じる,まじる," be mixed,  mingle with",n3
+交じる,まじる," be mixed,  mingle with",n3
+増す,ます," increase,  gain",n3
 貧しい,まずしい,"poor, needy",n3
-混ぜる,まぜる,"to mix, to stir",n3
-交ぜる,まぜる,"to be mixed, to be blended with",n3
+混ぜる,まぜる," mix,  stir",n3
+交ぜる,まぜる," be mixed,  be blended with",n3
 街,まち,"town street, road",n3
 間違い,まちがい,mistake,n3
 松,まつ,pine tree,n3
 真っ赤,まっか,"deep red, flushed of face",n3
 全く,まったく,"really, completely",n3
 祭,まつり,"festival, feast",n3
-学ぶ,まなぶ,to learn to study,n3
+学ぶ,まなぶ, learn  study,n3
 真似,まね,"mimicry, imitation, behavior",n3
-招く,まねく,to invite,n3
+招く,まねく, invite,n3
 柵,さく,"fence, paling",n3
-裂ける,さける,"to split, to tear, to burst",n3
-裁く,さばく,to judge,n3
+裂ける,さける," split,  tear,  burst",n3
+裁く,さばく, judge,n3
 酸化,さんか,oxidation,n3
 死,し,"death, decease",n3
 資格,しかく,"qualifications, requirements, capabilities",n3
@@ -1771,7 +1771,7 @@ expression,reading,meaning,tags
 申告,しんこく,"report, statement",n3
 真理,しんり,truth,n3
 水洗,すいせん,flushing,n3
-擦る,する,"to rub, to chafe",n3
+擦る,する," rub,  chafe",n3
 正規,せいき,"regular, legitimate",n3
 精巧,せいこう,"elaborate, delicate, exquisite",n3
 精算,せいさん,"exact calculation, adjustment",n3
@@ -1785,8 +1785,8 @@ expression,reading,meaning,tags
 先行,せんこう,"preceding, going first",n3
 選考,せんこう,"selection, screening",n3
 相,そう,"aspect, phase, countenance",n3
-沿う,そう,"to run along, to follow",n3
-添う,そう,"to accompany, to comply with",n3
+沿う,そう," run along,  follow",n3
+添う,そう," accompany,  comply with",n3
 僧,そう,"monk, priest",n3
 像,ぞう,"statue, image",n3
 捜査,そうさ,"search esp in criminal investigations, investigation",n3
@@ -1794,68 +1794,68 @@ expression,reading,meaning,tags
 創造,そうぞう,creation,n3
 隊,たい,"party, troops",n3
 退学,たいがく,dropping out of school,n3
-高まる,たかまる,to rise to grow to mount ,n3
-断つ,たつ,"to sever, to cut off",n3
+高まる,たかまる, rise  grow  mount ,n3
+断つ,たつ," sever,  cut off",n3
 盾,たて,shield,n3
 例え,たとえ,example even though,n3
 挑戦,ちょうせん,"challenge, defiance",n3
 治療,ちりょう,medical treatment,n3
-接ぐ,つぐ,to join to piece together to set bones to graft trees,n3
-継ぐ,つぐ,to succeed someone in a business or inheritance,n3
-摘む,つむ,"to pluck, to pick, to trim",n3
+接ぐ,つぐ, join  piece together  set bones  graft trees,n3
+継ぐ,つぐ, succeed someone in a business or inheritance,n3
+摘む,つむ," pluck,  pick,  trim",n3
 露,つゆ,dew,n3
-強まる,つよまる,"to get strong, to gain strength",n3
-強める,つよめる,"to strengthen, to emphasize",n3
+強まる,つよまる," get strong,  gain strength",n3
+強める,つよめる," strengthen,  emphasize",n3
 転校,てんこう,change schools,n3
 伝言,でんごん,verbal message,n3
-問う,とう,"to ask, to question",n3
+問う,とう," ask,  question",n3
 棟,とう,ridge of roof,n3
 倒産,とうさん,"corporate bankruptcy, insolvency",n3
 同士,どうし,"one another, companion, comrade",n3
 同志,どうし,"same mind, comrade, kindred soul",n3
 当然,とうぜん,obvious natural,n3
 動揺,どうよう,"disturbance, flutter shock",n3
-説く,とく,"to explain, to advocate",n3
-綴じる,とじる,"to bind, to file",n3
+説く,とく," explain,  advocate",n3
+綴じる,とじる," bind,  file",n3
 供,とも,"accompanying, attendant, companion, retinue",n3
 並,なみ,"medium , food serving size, quality, price, etc, ordinary",n3
-慣らす,ならす,to accustom,n3
-馴らす,ならす,"to domesticate, to tame",n3
+慣らす,ならす, accustom,n3
+馴らす,ならす," domesticate,  tame",n3
 難,なん,"difficulty, hardships, defect",n3
 年鑑,ねんかん,yearbook,n3
 脳,のう,"brain, memory",n3
-臨む,のぞむ,"to look out on, to face, to attend function",n3
+臨む,のぞむ," look out on,  face,  attend function",n3
 肺,はい,lung,n3
 ～敗,はい,"counter for loss, defeat",n3
-映える,はえる,"to shine, to look attractive, to look pretty",n3
-諮る,はかる,"to consult with, to confer",n3
-図る,はかる,"to plot, to attempt, to devise, to design, to refer a to b",n3
-生やす,はやす,"to grow, to cultivate, to wear beard",n3
+映える,はえる," shine,  look attractive,  look pretty",n3
+諮る,はかる," consult with,  confer",n3
+図る,はかる," plot,  attempt,  devise,  design,  refer a  b",n3
+生やす,はやす," grow,  cultivate,  wear beard",n3
 班,はん,"group, party, section mil",n3
 判,はん,size of paper or books,n3
 版,はん,edition,n3
 碑,ひ,stone monument bearing an inscription,n3
 非行,ひこう,"delinquency, misconduct",n3
 票,ひょう,"label, ballot, sign",n3
-広まる,ひろまる,"to spread, to be propagated",n3
-深める,ふかめる,"to deepen, to heighten, to intensify",n3
+広まる,ひろまる," spread,  be propagated",n3
+深める,ふかめる," deepen,  heighten,  intensify",n3
 福,ふく,good fortune,n3
 振り,ふり,"style, manner",n3
-経る,へる,"to pass, to elapse, to experience",n3
+経る,へる," pass,  elapse,  experience",n3
 保護,ほご,"care, protection, shelter",n3
 保障,ほしょう,"guarantee, security, warranty",n3
 補償,ほしょう,"compensation, reparation",n3
 前もって,まえもって,"in advance, beforehand, previously",n3
 膜,まく,"membrane, film",n3
 股,また,"thigh, crotch",n3
-見掛ける,みかける,"to happen to see, to notice, to catch sight of",n3
-捲る,めくる,"to turn over, to turn pages of a book",n3
+見掛ける,みかける," happen  see,  notice,  catch sight of",n3
+捲る,めくる," turn over,  turn pages of a book",n3
 野党,やとう,opposition party,n3
 優,ゆう,"superiority, high grade",n3
 有機,ゆうき,organic,n3
 世,よ,"world, society, generation",n3
 良い,よい,"good, nice",n3
 予想,よそう,"expectation, anticipation, prediction",n3
-弱まる,よわまる,"to weaken, to be emaciated, to be dejected",n3
-弱める,よわめる,to weaken,n3
+弱まる,よわまる," weaken,  be emaciated,  be dejected",n3
+弱める,よわめる, weaken,n3
 枠,わく,"frame, slide",n3

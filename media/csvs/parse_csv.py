@@ -24,9 +24,9 @@ def clean_csv(csv):
     kanji_hiragana_katakana = r'[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]'
     df['meaning'] = df['meaning'].apply(lambda x: re.sub(kanji_hiragana_katakana, '', x))
 
-    # Remove standalone occurrences of "vt" or "vi" or "eg"
-    standalone_vt_vi_eg = r'\b(vt|vi|eg)\b'
-    df['meaning'] = df['meaning'].str.replace(standalone_vt_vi_eg, '', regex=True)
+    # Remove standalone occurrences of "vt", "vi", "eg", "to"
+    standalone = r'\b(vt|vi|eg|to)\b'
+    df['meaning'] = df['meaning'].str.replace(standalone, '', regex=True)
     df['meaning'] = df['meaning'].apply(lambda x: x.lower())
 
     mask = df['expression'].apply(lambda x: contains_kanji_or_hiragana(x))          # Apply the function and create a boolean mask
