@@ -24,3 +24,4 @@ class Command(BaseCommand):
                         meaning=row['meaning'],
                         tags=jlpt_level
                     )
+                print(f"Loaded {csv_file} to database")

@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from .models import Kanji, JLPTLevel
-from .forms import KanjiTestForm
+from .models import Kanji
 from .utils import handle_test_completion_or_advancement, check_answer_similarity
 from django.http import JsonResponse
 import random

@@ -8,13 +8,7 @@
 {% block content %}
   <h1>Kanji Test: {{ level | upper }}</h1>
   <p id="currentKanji">
-    {% if kanji != None %}
-        {{ kanji }}
-    {% elif pass %}
-        &#x2705; <!-- This is the Unicode code for the ✅ emoji. Displayed when "pass" is True. -->
-    {% else %}
-        &#x274C; <!-- This is the Unicode code for the ❌ emoji. Displayed when "pass" is False. -->
-    {% endif %}
+    {{ kanji }}
   </p>
 
   <form method="post" id="kanjiTestForm">
@@ -86,7 +80,11 @@
         }
             document.querySelector('h1').textContent = `${data.level.toUpperCase()}`;
             document.getElementById('scoreDisplay').textContent = `Score: ${data.score}/${data.index}`;
-            document.getElementById('currentKanji').textContent = `${data.kanji}`;
+            if (data.kanji) {
+                document.getElementById('currentKanji').textContent = data.kanji;
+            } else {
+                document.getElementById('currentKanji').textContent = data.pass ? "\u2705" : "\u274C";
+            }
         })
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error.message);

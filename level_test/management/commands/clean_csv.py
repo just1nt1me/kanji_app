@@ -1,5 +1,3 @@
-# from nltk.corpus import wordnet
-# from nltk.tokenize import word_tokenize
 import os
 import pandas as pd
 import re
@@ -44,6 +42,15 @@ class Command(BaseCommand):
                     df['reading'] = df['reading'].str.replace(characters_to_remove, '')
                     df['meaning'] = df['meaning'].str.replace(characters_to_remove, '')
 
+                    # Remove kanji, hiragana, and katakana characters from the 'meaning' column
+                    kanji_hiragana_katakana = r'[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]'
+                    df['meaning'] = df['meaning'].apply(lambda x: re.sub(kanji_hiragana_katakana, '', x))
+
+                    # Remove standalone occurrences of "vt", "vi", "eg", "to"
+                    standalone = r'\b(vt|vi|eg|to)\b'
+                    df['meaning'] = df['meaning'].str.replace(standalone, '', regex=True)
+                    df['meaning'] = df['meaning'].apply(lambda x: x.lower())
+
                     # Create a mask to filter rows containing kanji or hiragana
                     mask = df['expression'].apply(lambda x: contains_kanji_or_hiragana(x))
                     df = df[mask]
@@ -54,37 +61,3 @@ class Command(BaseCommand):
                     self.stdout.write(self.style.SUCCESS(f'Successfully cleaned and updated {csv_file}'))
                 else:
                     self.stdout.write(self.style.WARNING(f'CSV file {csv_file} not found in {csv_directory}'))
-
-
-
-# Define a function to compute WordNet-based similarity
-def wordnet_similarity(user_input, correct_answer):
-    user_tokens = word_tokenize(user_input)
-    answer_tokens = word_tokenize(correct_answer)
-
-    # Initialize a list to store individual word similarities
-    word_similarities = []
-
-    for user_word in user_tokens:
-        max_similarity = 0  # Initialize max similarity for the current user word
-
-        for answer_word in answer_tokens:
-            user_synsets = wordnet.synsets(user_word)
-            answer_synsets = wordnet.synsets(answer_word)
-
-            if user_synsets and answer_synsets:
-                similarity = max(
-                    s1.wup_similarity(s2) for s1 in user_synsets for s2 in answer_synsets
-                )
-
-                if similarity > max_similarity:
-                    max_similarity = similarity
-
-        word_similarities.append(max_similarity)
-
-    # Calculate the average similarity across all user words
-    if word_similarities:
-        average_similarity = sum(word_similarities) / len(word_similarities)
-        return average_similarity
-    else:
-        return 0
