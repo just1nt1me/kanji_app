@@ -7,7 +7,7 @@ expression,reading,meaning,tags
 明るい,あかるい,bright in reference to personality or weather cheerful,n5
 秋,あき,fall season,n5
 開く,あく,"to open, to become open",n5
-開ける,あける,to open vt,n5
+開ける,あける,to open ,n5
 上げる,あげる,"to raise, to lift",n5
 朝,あさ,morning,n5
 朝御飯,あさごはん,breakfast,n5
@@ -22,8 +22,8 @@ expression,reading,meaning,tags
 熱い,あつい,hot objects,n5
 厚い,あつい,"kind, warmhearted, thick, deep",n5
 後,あと,afterwards later in the future the rest since then,n5
-兄,あに,my older brother humble,n5
-姉,あね,my older sister humble,n5
+兄,あに,my older brother ,n5
+姉,あね,my older sister ,n5
 浴びる,あびる,"to bathe, to shower",n5
 危ない,あぶない,"dangerous, critical",n5
 甘い,あまい,"generous, sweet",n5
@@ -51,10 +51,10 @@ expression,reading,meaning,tags
 犬,いぬ,dog,n5
 今,いま,now,n5
 意味,いみ,"meaning, significance",n5
-妹,いもうと,younger sister humble,n5
+妹,いもうと,younger sister ,n5
 嫌,いや,"disagreeable, detestable, unpleasant",n5
 入口,いりぐち,entrance,n5
-居る,いる,"humble to be animate, to exist",n5
+居る,いる," to be animate, to exist",n5
 要る,いる,to need,n5
 入れる,いれる,to put in,n5
 色,いろ,color,n5
@@ -66,14 +66,14 @@ expression,reading,meaning,tags
 歌う,うたう,to sing,n5
 生まれる,うまれる,to be born,n5
 海,うみ,"sea, beach",n5
-売る,うる,to sell vt,n5
+売る,うる,to sell ,n5
 上着,うわぎ,"coat, jacket",n5
 絵,え,a painting a picture a drawing,n5
 映画,えいが,"movie, film",n5
 映画館,えいがかん,"movie theater, cinema",n5
-英語,えいご,English language,n5
+英語,えいご,english language,n5
 駅,えき,station,n5
-～円,えん,Yen,n5
+～円,えん,yen,n5
 鉛筆,えんぴつ,pencil,n5
 美味しい,おいしい,"delicious, tasty",n5
 多い,おおい,many there are a lot,n5
@@ -83,14 +83,14 @@ expression,reading,meaning,tags
 お母さん,おかあさん,mother formal,n5
 お菓子,おかし,"confections, sweets, snack",n5
 お金,おかね,money,n5
-起きる,おきる,"to get up eg, from sleeping to happen",n5
+起きる,おきる,"to get up , from sleeping to happen",n5
 置く,おく,to put to lay to place,n5
-奥さん,おくさん,someone else's wife hon,n5
+奥さん,おくさん,someone else's wife,n5
 お酒,おさけ,sake alcohol,n5
 お皿,おさら,"plate, dish",n5
 伯父; 叔父さん,おじさん,"uncle, middleaged man",n5
 教える,おしえる,"to teach, to inform, to instruct",n5
-押す,おす,"to push, to press, to stamp eg, a passport",n5
+押す,おす,"to push, to press, to stamp , a passport",n5
 遅い,おそい,slow to be late,n5
 お茶,おちゃ,green tea,n5
 お手洗い,おてあらい,"toilet, restroom, bathroom lit, a place to wash one's hands",n5
@@ -113,7 +113,7 @@ expression,reading,meaning,tags
 泳ぐ,およぐ,to swim,n5
 降りる,おりる,to get off,n5
 終る,おわる,"to finish, to close",n5
-音楽,おんがく,Music,n5
+音楽,おんがく,music,n5
 女,おんな,"woman, female",n5
 女の子,おんなのこ,girl,n5
 ～回,かい,counter for occurrences  times,n5
@@ -131,21 +131,21 @@ expression,reading,meaning,tags
 書く,かく,to write,n5
 学生,がくせい,student,n5
 ～か月,かげつ,number of months,n5
-掛ける,かける,"to put on eg, glasses to hang eg, on a wall",n5
+掛ける,かける,"to put on , glasses to hang , on a wall",n5
 傘,かさ,"umbrella, parasol",n5
 貸す,かす,to lend,n5
 風,かぜ,"wind, breeze",n5
 風邪,かぜ,"cold, flu",n5
-方,かた, honorific form for 人 ひと  way of doing,n5
+方,かた,way of doing,n5
 家族,かぞく,"family, members of a family",n5
 片仮名,かたかな,katakana,n5
 ～月,がつ,month of year,n5
 学校,がっこう,a school,n5
 家庭,かてい,home family,n5
-角,かど,"corner eg, desk, pavement",n5
+角,かど,"corner , desk, pavement",n5
 花瓶,かびん,flower vase,n5
 紙,かみ,paper,n5
-火曜日,かようび,Tuesday,n5
+火曜日,かようび,tuesday,n5
 辛い,からい,hot and spicy salty,n5
 体,からだ,body health,n5
 借りる,かりる,"to borrow, to owe",n5
@@ -153,7 +153,7 @@ expression,reading,meaning,tags
 川; 河,かわ,river,n5
 ～側,がわ, side,n5
 可愛い,かわいい,"cute, adorable",n5
-漢字,かんじ,kanji Chinese character,n5
+漢字,かんじ,kanji chinese character,n5
 木,き,"tree, wood, timber",n5
 黄色,きいろ,yellow,n5
 黄色い,きいろい,yellow,n5
@@ -170,16 +170,16 @@ expression,reading,meaning,tags
 牛乳,ぎゅうにゅう,milk,n5
 今日,きょう,"today, this day",n5
 教室,きょうしつ,classroom,n5
-兄弟,きょうだい,"siblings humble, brothers and sisters",n5
+兄弟,きょうだい,"siblings , brothers and sisters",n5
 去年,きょねん,last year,n5
 嫌い,きらい,dislike,n5
 切る,きる,to cut to hang up a phone,n5
 着る,きる,to put on clothes above your waist to wear,n5
 綺麗,きれい,"pretty, clean, tidy",n5
 銀行,ぎんこう,bank,n5
-金曜日,きんようび,Friday,n5
+金曜日,きんようび,friday,n5
 薬,くすり,medicine,n5
-下さい,ください,with teform verb please do for me,n5
+下さい,ください,please do for me,n5
 果物,くだもの,fruit,n5
 口,くち,job opening mouth,n5
 靴,くつ,"shoes, footwear",n5
@@ -197,10 +197,10 @@ expression,reading,meaning,tags
 消す,けす,"to erase, to delete, to turn off power",n5
 結構,けっこう,"splendid enough, tolerably",n5
 結婚,けっこん する,marriage get married,n5
-月曜日,げつようび,Monday,n5
+月曜日,げつようび,monday,n5
 玄関,げんかん,entrance to a house or a building,n5
 元気,げんき,"healthy, energetic",n5
-～個,こ,"counter for small items eg, fruits, cups",n5
+～個,こ,"counter for small items , fruits, cups",n5
 五,ご,five,n5
 ～語,ご,"word, language",n5
 公園,こうえん,a park,n5
@@ -208,10 +208,10 @@ expression,reading,meaning,tags
 紅茶,こうちゃ,black tea,n5
 交番,こうばん,police box,n5
 声,こえ,voice,n5
-午後,ごご,"afternoon, PM",n5
+午後,ごご,"afternoon, pm",n5
 九日,ここのか,nine days ninth day of the month,n5
 九つ,ここのつ,nine things,n5
-午前,ごぜん,"morning, AM",n5
+午前,ごぜん,"morning, am",n5
 答える,こたえる,"to answer, to reply",n5
 今年,ことし,this year,n5
 言葉,ことば,language words expressions,n5
@@ -227,7 +227,7 @@ expression,reading,meaning,tags
 先,さき,"future recent, previous",n5
 咲く,さく,to bloom,n5
 作文,さくぶん,essay composition,n5
-差す,さす,"to raise stretch out hands, to raise eg, umbrella",n5
+差す,さす,"to raise stretch out hands, to raise , umbrella",n5
 ～冊,さつ,counter for books,n5
 雑誌,ざっし,"magazine, journal",n5
 砂糖,さとう,sugar,n5
@@ -269,7 +269,7 @@ expression,reading,meaning,tags
 白い,しろい,white,n5
 ～人,じん,counter for people,n5
 新聞,しんぶん,newspaper,n5
-水曜日,すいようび,Wednesday,n5
+水曜日,すいようび,wednesday,n5
 吸う,すう,"to breathe in, to suck",n5
 好き,すき,"liking, fondness, love",n5
 少ない,すくない,a little a few,n5
@@ -294,7 +294,7 @@ expression,reading,meaning,tags
 ～台,だい,counter for vehicles machines,n5
 大学,だいがく,college university,n5
 大使館,たいしかん,embassy,n5
-大丈夫,だいじょうぶ,It's ok all right No need to worry Everything is under control,n5
+大丈夫,だいじょうぶ,it's ok all right no need to worry everything is under control,n5
 大好き,だいすき,"very likeable, like very much",n5
 大切,たいせつ,important,n5
 台所,だいどころ,kitchen,n5
@@ -343,7 +343,7 @@ expression,reading,meaning,tags
 電気,でんき,"electricity, electric light",n5
 電車,でんしゃ,electric train,n5
 電話,でんわ,a telephone,n5
-戸,と,door Japanese style,n5
+戸,と,door japanese style,n5
 ～度,ど,counter for occurrences  degree  point,n5
 動物,どうぶつ,animal,n5
 遠い,とおい,"far away, distant",n5
@@ -357,7 +357,7 @@ expression,reading,meaning,tags
 飛ぶ,とぶ,"to fly, to hop",n5
 止まる,とまる,to come to a halt,n5
 友達,ともだち,friend,n5
-土曜日,どようび,Saturday,n5
+土曜日,どようび,saturday,n5
 鳥,とり,"chicken lit, bird",n5
 鶏肉,とりにく,chicken meat,n5
 取る,とる,to take a class to get a grade,n5
@@ -373,14 +373,14 @@ expression,reading,meaning,tags
 七日,なのか,seven days seventh day of the month,n5
 名前,なまえ,name,n5
 習う,ならう,to learn,n5
-並ぶ,ならぶ,"to line up, to stand in a line vi",n5
+並ぶ,ならぶ,"to line up, to stand in a line ",n5
 並べる,ならべる,to put things side by side to line up,n5
 何～,なん,what sort of ,n5
 二,に,two,n5
 肉,にく,meat,n5
 西,にし,west,n5
 ～日,にち," day of the month, for  days",n5
-日曜日,にちようび,Sunday,n5
+日曜日,にちようび,sunday,n5
 荷物,にもつ,luggage baggage,n5
 庭,にわ,garden,n5
 脱ぐ,ぬぐ,to take off clothes,n5
@@ -419,7 +419,7 @@ expression,reading,meaning,tags
 貼る,はる,to post to paste to attach,n5
 晴れ,はれ,clear sunny weather,n5
 晴れる,はれる,to be sunny,n5
-半,はん,"half eg, にじはん | halfpast two",n5
+半,はん,"half ,  | halfpast two",n5
 晩,ばん,evening,n5
 ～番,ばん,st th best,n5
 番号,ばんごう,"number, series of digits",n5
@@ -453,7 +453,7 @@ expression,reading,meaning,tags
 二日,ふつか,two days second day of the month,n5
 太い,ふとい,"fat, thick",n5
 冬,ふゆ,winter,n5
-降る,ふる,"to precipitate, to fall eg, rain, snow, etc",n5
+降る,ふる,"to precipitate, to fall , rain, snow, etc",n5
 古い,ふるい,"old in reference to objects, not people, aged, ancient",n5
 ～分,ふん, minutes,n5
 文章,ぶんしょう,"sentence, text",n5
@@ -496,7 +496,7 @@ expression,reading,meaning,tags
 三つ,みっつ,three things,n5
 緑,みどり,green,n5
 皆さん,みなさん,"all of you, everyone",n5
-南,みなみ,South,n5
+南,みなみ,south,n5
 耳,みみ,ear,n5
 見る,みる,"to see, to look",n5
 六日,むいか,six days sixth day of month,n5
@@ -506,7 +506,7 @@ expression,reading,meaning,tags
 村,むら,village,n5
 目,め,eyes,n5
 眼鏡,めがね,eye glasses,n5
-木曜日,もくようび,Thursday,n5
+木曜日,もくようび,thursday,n5
 持つ,もつ,"to hold, to carry to possess",n5
 物,もの,thing concrete object,n5
 門,もん,gate,n5
@@ -527,7 +527,7 @@ expression,reading,meaning,tags
 有名,ゆうめい,famous,n5
 雪,ゆき,snow,n5
 八日,ようか,eight days eighth day of the month,n5
-洋服,ようふく,Westernstyle clothes,n5
+洋服,ようふく,westernstyle clothes,n5
 横,よこ,beside side width,n5
 四日,よっか,four days fourth day of the month,n5
 四つ,よっつ,four things,n5
@@ -550,7 +550,7 @@ expression,reading,meaning,tags
 若い,わかい,young,n5
 分かる,わかる,to understand,n5
 忘れる,わすれる,to forget,n5
-私,わたし,"I, myself",n5
-渡す,わたす,to hand something over vt to get across,n5
+私,わたし,"i, myself",n5
+渡す,わたす,to hand something over  to get across,n5
 渡る,わたる,"to cross over, to go across",n5
 悪い,わるい,"bad, sinful inferior",n5
