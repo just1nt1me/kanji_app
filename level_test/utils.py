@@ -65,7 +65,7 @@ def spacy_similarity(user_input, correct_answer):
 
 def check_answer_similarity(user_answer, correct_answer):
     similarity = spacy_similarity(user_answer, correct_answer)
-    if similarity >= 0.85:
+    if similarity >= 0.8:
         return True
     return False
 

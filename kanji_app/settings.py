@@ -34,6 +34,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'level_test.apps.LevelTestConfig',
     'crispy_forms',
+    'kanji_app',
+    'level_test.templatetags',
     'crispy_bootstrap4',
     'django.contrib.admin',
     'django.contrib.auth',

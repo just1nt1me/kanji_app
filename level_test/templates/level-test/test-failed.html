@@ -1,4 +1,30 @@
 {% extends "level-test/base.html" %}
+{% load custom_filters %}
 {% block content %}
-  <h1>Failed</h1>
-{% endblock content %}
+<h1>Test Results</h1>
+
+{% for level, score in level_scores.items %}
+<h2>Level {{ level|upper }} Score: {{ score }}</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Kanji</th>
+            <th>Reading</th>
+            <th>Your Answer</th>
+            <th>Correct Answer</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for kanji, user_answer, correct_answer in results|filter_level:level %}
+        <tr>
+            <td>{{ kanji.expression }}</td>
+            <td>{{ kanji.reading }}</td>
+            <td>{{ user_answer }}</td>
+            <td>{{ correct_answer }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endfor %}
+{% endblock %}
