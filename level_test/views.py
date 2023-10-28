@@ -24,10 +24,9 @@ def start_test(request):
     request.session['score'] = 0
     request.session['current_level_index'] = 0
 
+    request.session['kanji'] = []
     request.session['correct_answers'] = []
-    request.session['incorrect_answers'] = []
     request.session['user_answers'] = []
-
     request.session['level_scores'] = {level: 0 for level in levels}
 
     request.session.modified = True
@@ -67,18 +66,17 @@ def kanji_test_post(request):
     correct_answer = current_kanji.meaning
     reading = current_kanji.reading
 
-    # save information for post-test results
+
     current_level = levels[int(request.session.get('current_level_index'))]
     if is_correct:
         request.session['score'] += 1
         request.session['level_scores'][current_level] += 1
-        request.session['correct_answers'].append(prev_kanji)
-    else:
-        request.session['incorrect_answers'].append(prev_kanji)
 
+    # save information for post-test results
+    request.session['kanji'].append(prev_kanji)
+    request.session['correct_answers'].append(correct_answer)
     user_answer = request.POST.get('answer')
     request.session['user_answers'].append(user_answer)
-
 
     request.session['current_index'] += 1
 
@@ -110,8 +108,8 @@ def test_complete(request):
     return render(request, 'level-test/test-complete.html', {'title': 'Test Complete'})
 
 def test_failed(request):
+    kanji_list = request.session.get('kanji', [])
     correct_answers = request.session.get('correct_answers', [])
-    incorrect_answers = request.session.get('incorrect_answers', [])
     user_answers = request.session.get('user_answers', [])
     levels = ["n5", "n4", "n3", "n2", "n1"]
     level = levels[int(request.session.get('current_level_index'))]
@@ -120,17 +118,15 @@ def test_failed(request):
 
     # Create results list for the template
     results = []
-    for index, kanji in enumerate(correct_answers + incorrect_answers):
-        kanji_object = Kanji.objects.get(expression=kanji)
-        results.append((kanji_object, user_answers[index], kanji_object.meaning))
+    for index, kanji_expression in enumerate(kanji_list):
+        kanji_object = Kanji.objects.get(expression=kanji_expression)
+        results.append((kanji_object, user_answers[index], correct_answers[index]))
 
     context = {
         'title': 'Test Failed',
-        'correct_answers': correct_answers,
-        'incorrect_answers': incorrect_answers,
+        'results': results,
         'level': level,
         'score': score,
-        'level_scores': level_scores,
-        'results': results
+        'level_scores': level_scores
     }
     return render(request, 'level-test/test-failed.html', context)
