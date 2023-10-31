@@ -41,13 +41,11 @@ def kanji_test(request):
         return kanji_test_post(request)
 
 def kanji_test_get(request):
-    print("this is a get request")
     current_index = int(request.session.get('current_index'))
     kanji_deck = request.session.get('kanji_deck', [])
     levels = ["n5", "n4", "n3", "n2", "n1"]
 
     if current_index >= len(kanji_deck) - 1:
-        print("the current index triggered a level up")
         return handle_test_completion_or_advancement(request)
 
     current_kanji = Kanji.objects.get(id=kanji_deck[current_index])
@@ -101,15 +99,11 @@ def kanji_test_post(request):
             'pass': True if request.session['score'] >= 5 else False,
         }
         response = JsonResponse(data)
-        print("AJAX check completed")
 
     return response
 
 
-def test_complete(request):
-    return render(request, 'level-test/test-complete.html', {'title': 'Test Complete'})
-
-def test_failed(request):
+def test_results(request):
     kanji_list = request.session.get('kanji', [])
     correct = request.session.get('correct', [])
     correct_answers = request.session.get('correct_answers', [])
@@ -125,10 +119,12 @@ def test_failed(request):
         results.append((kanji_expression, kanji_level, correct[index], user_answers[index], correct_answers[index]))
 
     context = {
-        'title': 'Test Failed',
         'results': results,
         'level': level,
         'score': score,
         'level_scores': level_scores
     }
-    return render(request, 'level-test/test-failed.html', context)
+    return render(request, 'level-test/test-results.html', context)
+
+# def test_complete(request):
+#     return render(request, 'level-test/test-complete.html', {'title': 'Test Complete'})

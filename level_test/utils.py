@@ -75,7 +75,7 @@ def handle_test_completion_or_advancement(request):
 
     # If 10 questions have been answered (starts at 0)
     if int(request.session['score']) < 5:  # If score is less than 5
-        return redirect('test_failed')
+        return redirect('test_results')
 
     # Check if there are more levels left
     if current_level_index < len(levels) - 1:
@@ -89,4 +89,4 @@ def handle_test_completion_or_advancement(request):
         return redirect('kanji_test')
     else:
         # All questions have been answered and all levels cleared
-        return render(request, 'level-test/test-complete.html', {'score': request.session.get('score')})
+        return redirect('test_results')
