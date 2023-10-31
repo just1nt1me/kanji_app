@@ -119,8 +119,7 @@ def test_failed(request):
     # Create results list for the template
     results = []
     for index, kanji_expression in enumerate(kanji_list):
-        kanji_object = Kanji.objects.get(expression=kanji_expression)
-        results.append((kanji_object, user_answers[index], correct_answers[index]))
+        results.append((kanji_expression, user_answers[index], correct_answers[index]))
 
     context = {
         'title': 'Test Failed',

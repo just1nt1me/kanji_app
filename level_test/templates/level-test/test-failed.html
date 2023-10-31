@@ -9,15 +9,17 @@
 <table border="1">
     <thead>
         <tr>
+            <!-- <th>Level</th> -->
             <th>Kanji</th>
             <th>Your Answer</th>
             <th>Correct Answer</th>
         </tr>
     </thead>
     <tbody>
-        {% for kanji, user_answer, correct_answer in results %}
+        {% for kanji_expression, user_answer, correct_answer in results %}
         <tr>
-            <td>{{ kanji.expression }}</td>
+            <!-- <td>{{ level }}</td> -->
+            <td>{{ kanji_expression }}</td>
             <td>{{ user_answer }}</td>
             <td>{{ correct_answer }}</td>
         </tr>
