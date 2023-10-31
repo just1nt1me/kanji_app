@@ -39,7 +39,7 @@ from django.shortcuts import render, redirect
 #         return 0
 
 # Load a spaCy model (for English in this case)
-nlp = spacy.load("en_core_web_md")
+nlp = spacy.load("en_core_web_sm")
 
 def spacy_similarity(user_input, correct_answer):
     user_tokens = nlp(user_input)

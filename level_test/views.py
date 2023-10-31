@@ -60,7 +60,7 @@ def kanji_test_post(request):
     current_kanji = Kanji.objects.get(id=kanji_deck[current_index])
     level_up = False
 
-    is_correct = check_answer_similarity(request.POST.get('answer'), current_kanji.meaning)
+    is_correct = check_answer_similarity(request.POST.get('answer').lower(), current_kanji.meaning)
     prev_kanji = current_kanji.expression
     correct_answer = current_kanji.meaning
     reading = current_kanji.reading
