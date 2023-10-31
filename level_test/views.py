@@ -25,6 +25,7 @@ def start_test(request):
     request.session['current_level_index'] = 0
 
     request.session['kanji'] = []
+    request.session['correct'] = []
     request.session['correct_answers'] = []
     request.session['user_answers'] = []
     request.session['level_scores'] = {level: 0 for level in levels}
@@ -73,7 +74,8 @@ def kanji_test_post(request):
         request.session['level_scores'][current_level] += 1
 
     # save information for post-test results
-    request.session['kanji'].append(prev_kanji)
+    request.session['correct'].append(is_correct)
+    request.session['kanji'].append((prev_kanji, current_level))
     request.session['correct_answers'].append(correct_answer)
     user_answer = request.POST.get('answer')
     request.session['user_answers'].append(user_answer)
@@ -109,6 +111,7 @@ def test_complete(request):
 
 def test_failed(request):
     kanji_list = request.session.get('kanji', [])
+    correct = request.session.get('correct', [])
     correct_answers = request.session.get('correct_answers', [])
     user_answers = request.session.get('user_answers', [])
     levels = ["n5", "n4", "n3", "n2", "n1"]
@@ -118,8 +121,8 @@ def test_failed(request):
 
     # Create results list for the template
     results = []
-    for index, kanji_expression in enumerate(kanji_list):
-        results.append((kanji_expression, user_answers[index], correct_answers[index]))
+    for index, (kanji_expression, kanji_level) in enumerate(kanji_list):
+        results.append((kanji_expression, kanji_level, correct[index], user_answers[index], correct_answers[index]))
 
     context = {
         'title': 'Test Failed',
