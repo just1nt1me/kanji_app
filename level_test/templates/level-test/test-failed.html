@@ -4,27 +4,37 @@
 <h1>Test Results</h1>
 
 {% for level, score in level_scores.items %}
-<h2>Level {{ level|upper }} Score: {{ score }}</h2>
+    {% with kanji_for_this_level=results|filter_kanji_by_level:level %}
+    {% if kanji_for_this_level %}
+        <h2>Level {{ level|upper }} Score: {{ score }}</h2>
 
-<table border="1">
-    <thead>
-        <tr>
-            <!-- <th>Level</th> -->
-            <th>Kanji</th>
-            <th>Your Answer</th>
-            <th>Correct Answer</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for kanji_expression, user_answer, correct_answer in results %}
-        <tr>
-            <!-- <td>{{ level }}</td> -->
-            <td>{{ kanji_expression }}</td>
-            <td>{{ user_answer }}</td>
-            <td>{{ correct_answer }}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Kanji</th>
+                    <th>User</th>
+                    <th>Correct</th>
+                    <th>Answer</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for kanji_expression, kanji_level, correct, user_answer, correct_answer in kanji_for_this_level %}
+                    <tr>
+                        <td>{{ kanji_expression }}</td>
+                        <td>{{ user_answer }}</td>
+                        <td>
+                          {% if correct %}
+                              &#x2705;
+                          {% else %}
+                              &#x274C;
+                          {% endif %}
+                        </td>
+                        <td>{{ correct_answer }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+    {% endwith %}
 {% endfor %}
 {% endblock %}
