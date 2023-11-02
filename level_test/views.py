@@ -1,9 +1,9 @@
-from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.shortcuts import render, redirect
 from .models import Kanji
 from .utils import handle_test_completion_or_advancement, check_answer_similarity
 from django.http import JsonResponse
 import random
+
 
 # return what we want user to see from "home" page
 def home(request):
