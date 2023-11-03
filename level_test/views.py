@@ -78,9 +78,9 @@ def kanji_test_post(request):
     user_answer = request.POST.get('answer')
     request.session['user_answers'].append(user_answer)
 
-    request.session['current_index'] += 1
 
     if current_index + 1 < len(kanji_deck):
+        request.session['current_index'] += 1
         current_kanji = Kanji.objects.get(id=kanji_deck[int(request.session['current_index'])])
     else:
         level_up = True
