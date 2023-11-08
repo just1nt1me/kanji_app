@@ -14,10 +14,10 @@
   <form method="post" id="kanjiTestForm">
       {% csrf_token %}
       <input type="text" name="answer" placeholder="Enter the meaning">
+      <p id="feedback"></p>
       <p id="scoreDisplay">Score: {{ score }}</p>
   </form>
 
-  <p id="feedback"></p>
   <div id="results"></div>
 {% endblock %}
 
@@ -38,7 +38,7 @@
 
         if (!answerValue) {
             // Notify the user they must enter something
-            feedbackElem.textContent = "Please enter your answer.";
+            // feedbackElem.textContent = "Please enter your answer.";
             return; // Stop the function from proceeding
         }
 
