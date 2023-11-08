@@ -29,6 +29,7 @@
     const answerInput = form.querySelector('input[name="answer"]');
     const resultsDiv = document.getElementById('results');
 
+    let levelUpEventAdded = false;
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();  // Preventing the form's default submit action
@@ -54,30 +55,34 @@
             answerInput.value = "";  // Clearing the input field
             answerInput.classList.add('correct');
             answerInput.classList.remove('incorrect');
-        } else {
+          } else {
             feedbackElem.textContent = `Incorrect. ${data.prev_kanji} (${data.reading}) means ${data.correct_answer}`;
             answerInput.value = "";  // Clearing the input field
             answerInput.classList.add('incorrect');
             answerInput.classList.remove('correct');
-        }
-
-        if(data.level_up) {
-          let results = document.createElement('p');
-
-            if(data.pass) {
-              results.textContent += ` Congratulations! You've passed the ${data.level} Level Test. Press Enter to continue.`;
-          } else {
-              results.textContent += ` Sorry, you did not pass the ${data.level} Level Test. Press Enter for your results.`;
           }
 
-          resultsDiv.appendChild(results);
+          if(data.level_up) {
+            let results = document.createElement('p');
 
-            document.addEventListener('keydown', function(event) {
-                if (event.code === 'Enter') {
-                    window.location.href = "{% url 'kanji_test' %}";
-                }
-            }, {once: true});  // The event will be removed after being called once
-        }
+              if(data.pass) {
+                results.textContent += ` Congratulations! You've passed the ${data.level} Level Test. Press Enter to continue.`;
+            } else {
+                results.textContent += ` Sorry, you did not pass the ${data.level} Level Test. Press Enter for your results.`;
+            }
+
+            if (!levelUpEventAdded) {
+              resultsDiv.appendChild(results);
+
+              document.addEventListener('keydown', function(event) {
+                  if (event.code === 'Enter') {
+                      window.location.href = "{% url 'kanji_test' %}";
+                  }
+              }, {once: true});  // The event will be removed after being called once
+
+              levelUpEventAdded = true;
+            }
+          }
             document.querySelector('h1').textContent = `${data.level.toUpperCase()}`;
             document.getElementById('scoreDisplay').textContent = `Score: ${data.score}/${data.index}`;
             if (data.kanji) {
