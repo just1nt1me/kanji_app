@@ -34,6 +34,14 @@
     form.addEventListener('submit', function(e) {
         e.preventDefault();  // Preventing the form's default submit action
 
+        const answerValue = answerInput.value.trim(); // Trim whitespace
+
+        if (!answerValue) {
+            // Notify the user they must enter something
+            feedbackElem.textContent = "Please enter your answer.";
+            return; // Stop the function from proceeding
+        }
+
         let formData = new FormData(form);
 
         fetch("{% url 'kanji_test' %}", {
