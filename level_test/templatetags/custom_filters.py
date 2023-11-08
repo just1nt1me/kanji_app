@@ -9,4 +9,4 @@ def filter_level(results, level):
 
 @register.filter(name='filter_kanji_by_level')
 def filter_kanji_by_level(results, level):
-    return [item for item in results if item[1] == level]
+    return [item for item in results if item[2] == level]

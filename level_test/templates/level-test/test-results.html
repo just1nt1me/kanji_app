@@ -11,16 +11,16 @@
         <table border="1">
             <thead>
                 <tr>
-                    <th>Kanji</th>
+                    <th>Kanji (reading)</th>
                     <th>Input</th>
                     <th>Correct</th>
                     <th>Answer</th>
                 </tr>
             </thead>
             <tbody>
-                {% for kanji_expression, kanji_level, correct, user_answer, correct_answer in kanji_for_this_level %}
+                {% for kanji_expression, kanji_reading, kanji_level, correct, user_answer, correct_answer in kanji_for_this_level %}
                     <tr>
-                        <td>{{ kanji_expression }}</td>
+                        <td>{{ kanji_expression }} ({{ kanji_reading }})</td>
                         <td>{{ user_answer }}</td>
                         <td>
                           {% if correct %}

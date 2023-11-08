@@ -73,7 +73,7 @@ def kanji_test_post(request):
 
     # save information for post-test results
     request.session['correct'].append(is_correct)
-    request.session['kanji'].append((prev_kanji, current_level))
+    request.session['kanji'].append((prev_kanji, reading, current_level))
     request.session['correct_answers'].append(correct_answer)
     user_answer = request.POST.get('answer')
     request.session['user_answers'].append(user_answer)
@@ -115,8 +115,8 @@ def test_results(request):
 
     # Create results list for the template
     results = []
-    for index, (kanji_expression, kanji_level) in enumerate(kanji_list):
-        results.append((kanji_expression, kanji_level, correct[index], user_answers[index], correct_answers[index]))
+    for index, (kanji_expression, kanji_reading, kanji_level) in enumerate(kanji_list):
+        results.append((kanji_expression, kanji_reading, kanji_level, correct[index], user_answers[index], correct_answers[index]))
 
     context = {
         'results': results,
