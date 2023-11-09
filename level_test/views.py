@@ -83,6 +83,7 @@ def kanji_test_post(request):
         request.session['current_index'] += 1
         current_kanji = Kanji.objects.get(id=kanji_deck[int(request.session['current_index'])])
     else:
+        request.session['current_index'] += 1
         level_up = True
 
     if request.headers.get('X-Requested-With') == 'XMLHttpRequest':  # AJAX request

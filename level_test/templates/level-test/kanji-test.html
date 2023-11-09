@@ -14,6 +14,7 @@
   <form method="post" id="kanjiTestForm">
       {% csrf_token %}
       <input type="text" name="answer" placeholder="Enter the meaning">
+      <button type="submit" id="submitButton">Submit</button>
       <p id="feedback"></p>
       <p id="scoreDisplay">Score: {{ score }}</p>
   </form>
@@ -30,6 +31,7 @@
     const resultsDiv = document.getElementById('results');
 
     let levelUpEventAdded = false;
+    answerInput.focus();
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();  // Preventing the form's default submit action
@@ -37,8 +39,6 @@
         const answerValue = answerInput.value.trim(); // Trim whitespace
 
         if (!answerValue) {
-            // Notify the user they must enter something
-            // feedbackElem.textContent = "Please enter your answer.";
             return; // Stop the function from proceeding
         }
 
@@ -82,12 +82,9 @@
             if (!levelUpEventAdded) {
               resultsDiv.appendChild(results);
 
-              document.addEventListener('keydown', function(event) {
-                  if (event.code === 'Enter') {
-                      window.location.href = "{% url 'kanji_test' %}";
-                  }
+              document.getElementById('submitButton').addEventListener('click', function() {
+                  window.location.href = "{% url 'kanji_test' %}";
               }, {once: true});  // The event will be removed after being called once
-
               levelUpEventAdded = true;
             }
           }
