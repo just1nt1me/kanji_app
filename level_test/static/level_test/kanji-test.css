@@ -1,0 +1,66 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f3f3f3;
+  text-align: center;
+  padding-top: 50px;
+}
+
+h1 {
+  color: #cccccc;
+}
+
+h2 {
+  color: #555;
+}
+
+#currentKanji {
+  font-size: 80px;
+  margin-bottom: 30px;
+}
+
+#kanjiTestForm {
+  display: inline-block;
+}
+
+input[type="text"] {
+  font-size: 20px;
+  padding: 10px;
+  border: 2px solid #cccccc;
+  width: 300px;
+  transition: border-color 0.3s;
+}
+
+.correct {
+  border-color: green;
+}
+
+.incorrect {
+  border-color: red;
+}
+
+#submitButton {
+  font-size: 20px;
+  padding: 10px;
+  border: 2px solid #cccccc;
+  width: 100px;
+  background-color: #cccccc;
+  transition: border-color 0.3s;
+  margin-left: 10px;
+}
+
+#scoreDisplay {
+  margin-top: 20px;
+}
+
+#feedback {
+  margin-top: 20px;
+  color: #a21e9c;
+  font-weight: bold;
+}
+
+#results {
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1871c0;
+}
