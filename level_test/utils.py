@@ -40,7 +40,7 @@ def wordnet_similarity(user_input, correct_answer):
 
 def check_answer_similarity(user_answer, correct_answer):
     similarity = wordnet_similarity(user_answer, correct_answer)
-    if similarity >= 0.7:
+    if similarity >= 0.75:
         return True
     return False
 
