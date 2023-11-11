@@ -2,25 +2,35 @@
 {% load static %}
 
 {% block styles %}
-    <link rel="stylesheet" href="{% static 'level_test/main.css' %}">
-    <link rel="stylesheet" href="{% static 'level_test/kanji-test.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'level_test/main.css' %}">
+    <link rel="stylesheet" href="{% static 'level_test/kanji-test.css' %}"> -->
 {% endblock %}
 
 {% block content %}
+<div class="container">
   <h1>Kanji Test: {{ level | upper }}</h1>
-  <p id="currentKanji">
-    {{ kanji }}
-  </p>
+  <!-- Card with fixed size for square appearance -->
+  <div class="card text-center text-white bg-info" id="currentKanji" style="height: 300px; width: 300px; margin: auto;">
+    <!-- Enlarge the text size -->
+    <div class="d-flex align-items-center justify-content-center" style="height: 100%;">
+      <h1 class="card-title display-1" style="font-size: 5rem;">{{ kanji }}</h1>
+    </div>
+  </div>
 
-  <form method="post" id="kanjiTestForm">
+  <!-- Form with padding -->
+  <form class="form-inline justify-content-center my-4" method="post" id="kanjiTestForm">
       {% csrf_token %}
-      <input type="text" name="answer" placeholder="Enter the meaning">
-      <button type="submit" id="submitButton">Submit</button>
-      <p id="feedback"></p>
-      <p id="scoreDisplay">Score: {{ score }}</p>
+      <!-- Input with right margin -->
+      <input type="text" class="form-control mr-3" name="answer" placeholder="Enter the meaning">
+      <!-- Button -->
+      <button type="submit" id="submitButton" class="btn btn-primary">Submit</button>
   </form>
 
-  <div id="results"></div>
+  <div id="feedback" class="alert" role="alert"></div>
+  <div id="scoreDisplay">Score: {{ score }}</div>
+  <div id="results" class="alert" role="alert"></div>
+</div>
+
 {% endblock %}
 
 {% block scripts %}
@@ -62,22 +72,25 @@
             if (data.is_correct) {
             feedbackElem.textContent = `Correct! ${data.prev_kanji} (${data.reading}) means ${data.correct_answer}`;
             answerInput.value = "";  // Clearing the input field
-            answerInput.classList.add('correct');
-            answerInput.classList.remove('incorrect');
+            feedbackElem.classList.add('alert-success');
+            feedbackElem.classList.remove('alert-danger');
           } else {
             feedbackElem.textContent = `Incorrect. ${data.prev_kanji} (${data.reading}) means ${data.correct_answer}`;
             answerInput.value = "";  // Clearing the input field
-            answerInput.classList.add('incorrect');
-            answerInput.classList.remove('correct');
+            feedbackElem.classList.add('alert-danger');
+            feedbackElem.classList.remove('alert-success');
           }
 
           if(data.level_up) {
-            let results = document.createElement('p');
+            let results = document.createElement('div');
 
               if(data.pass) {
-                results.textContent += ` Congratulations! You've passed the ${data.level} Level Test. Press Enter to continue.`;
+                resultsDiv.textContent += ` Congratulations! You've passed the ${data.level} Level Test. Press Enter to continue.`;
+                resultsDiv.classList.add('alert-primary');
             } else {
-                results.textContent += ` Sorry, you did not pass the ${data.level} Level Test. Press Enter for your results.`;
+                resultsDiv.textContent += ` Sorry, you did not pass the ${data.level} Level Test. Press Enter for your results.`;
+                resultsDiv.classList.remove('alert-primary');
+                resultsDiv.classList.remove('alert-danger');
             }
 
             if (!levelUpEventAdded) {
