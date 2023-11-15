@@ -93,6 +93,10 @@ input.user-answer.incorrect {
   background-color: lightcoral;
 }
 
+/* .btn-fixed-width {
+  width: 200px;
+} */
+
 #darkModeContainer {
   position: fixed;
   bottom: 20px;

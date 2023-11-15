@@ -7,16 +7,17 @@
 {% endblock %}
 
 {% block content %}
+<main role="main" class="container">
   <div class="container-fluid" style="background-color: rgb(158, 9, 146);">
     <div class="row text-white">
       <div class="col-md-4 text-left">
         <h1>Kanji Level Test</h1>
       </div>
       <div class="col-md-4 text-center">
-        <h1>{{ level | upper }}</h1>
+        <h1 id="jlptLevel">{{ level | upper }}</h1>
       </div>
-      <div class="col-md-4 text-right" id="scoreDisplay">
-        <h1>Score: {{ score }}</h1>
+      <div class="col-md-4 text-right">
+        <h1 id="scoreDisplay">{{ score }}</h1>
       </div>
     </div>
     <div class="row justify-content-center">
@@ -38,10 +39,7 @@
       <div class="col-md-12 alert text-center" id="results" role="alert"></div>
     </div>
   </div>
-    <!-- <div id="feedback" class="alert" role="alert"></div>
-    <div id="results" class="alert" role="alert"></div>
-  </div> -->
-
+</main>
 {% endblock %}
 
 {% block scripts %}
@@ -51,6 +49,7 @@
     const feedbackElem = document.getElementById('feedback');
     const answerInput = form.querySelector('input[name="answer"]');
     const resultsDiv = document.getElementById('results');
+    const scoreCard = document.getElementById('scoreDisplay');
 
     let levelUpEventAdded = false;
     answerInput.focus();
@@ -113,8 +112,8 @@
               levelUpEventAdded = true;
             }
           }
-            document.querySelector('h1').textContent = `${data.level.toUpperCase()}`;
-            document.getElementById('scoreDisplay').textContent = `Score: ${data.score}/${data.index}`;
+            document.getElementById('jlptLevel').textContent = `${data.level.toUpperCase()}`;
+            scoreCard.textContent = `${data.score}/${data.index}`;
             if (data.kanji) {
                 document.getElementById('currentKanji').textContent = data.kanji;
             } else {

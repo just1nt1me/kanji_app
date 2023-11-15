@@ -1,10 +1,25 @@
 {% extends "level-test/base.html" %}
+{% load static %}
+
+{% block styles %}
+    <!-- <link rel="stylesheet" href="{% static 'level_test/main.css' %}"> -->
+    <!-- <link rel="stylesheet" href="{% static 'level_test/kanji-test.css' %}"> -->
+{% endblock %}
+
 {% block content %}
-  <h1>Home page</h1>
-  <p>Welcome to the Kanji Test website. Choose an option:</p>
-  <form action="{% url 'start_test' %}" method="get">
-    <button type="submit" class="btn btn-primary btn-block mb-3 ">Kanji Level Test</button>
-  </form>
-  <a href="" class="btn btn-success btn-block mb-3">Study</a>
-  <a href="#" class="btn btn-secondary btn-block">Another Option</a>
+<main role="main" class="container">
+  <h1 class="text-center">Welcome to the JLPT Kanji Study website</h1>
+  <p class="text-center">Choose an option below to get started</p>
+  <div class="row justify-content-center">
+    <form action="{% url 'start_test' %}" method="get">
+      <button type="submit" class="btn btn-primary btn-lg mb-2">Kanji Level Test</button>
+    </form>
+  </div>
+  <div class="row justify-content-center">
+    <a href="#" class="btn btn-success btn-lg mb-2">Study Decks</a>
+  </div>
+  <div class="row justify-content-center">
+    <a href="#" class="btn btn-secondary btn-lg mb-2">Statistics</a>
+  </div>
+</main>
 {% endblock content %}
