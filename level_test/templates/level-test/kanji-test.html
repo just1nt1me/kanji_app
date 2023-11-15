@@ -7,17 +7,17 @@
 {% endblock %}
 
 {% block content %}
-<main role="main" class="container">
-  <div class="container-fluid" style="background-color: rgb(158, 9, 146);">
+<main  role="main" class="container">
+  <div class="container-fluid" style="background-color: rgb(158, 9, 146); border-radius: 10px;">
     <div class="row text-white">
       <div class="col-md-4 text-left">
-        <h1>Kanji Level Test</h1>
+        <h2>Kanji Level Test</h2>
       </div>
       <div class="col-md-4 text-center">
-        <h1 id="jlptLevel">{{ level | upper }}</h1>
+        <h2 id="jlptLevel">{{ level | upper }}</h2>
       </div>
       <div class="col-md-4 text-right">
-        <h1 id="scoreDisplay">{{ score }}</h1>
+        <h2 id="scoreDisplay">{{ score }}</h2>
       </div>
     </div>
     <div class="row justify-content-center">
