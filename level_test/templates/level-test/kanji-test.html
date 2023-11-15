@@ -7,29 +7,40 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-  <h1>Kanji Test: {{ level | upper }}</h1>
-  <!-- Card with fixed size for square appearance -->
-  <div class="card text-center text-white bg-info" id="currentKanji" style="height: 300px; width: 300px; margin: auto;">
-    <!-- Enlarge the text size -->
-    <div class="d-flex align-items-center justify-content-center" style="height: 100%;">
-      <h1 class="card-title display-1" style="font-size: 5rem;">{{ kanji }}</h1>
+  <div class="container-fluid" style="background-color: rgb(158, 9, 146);">
+    <div class="row text-white">
+      <div class="col-md-4 text-left">
+        <h1>Kanji Level Test</h1>
+      </div>
+      <div class="col-md-4 text-center">
+        <h1>{{ level | upper }}</h1>
+      </div>
+      <div class="col-md-4 text-right" id="scoreDisplay">
+        <h1>Score: {{ score }}</h1>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-12 text-center">
+        <p id="currentKanji" class="display-1" style="font-size: 5rem;">{{ kanji }}</p>
+      </div>
     </div>
   </div>
-
-  <!-- Form with padding -->
-  <form class="form-inline justify-content-center my-4" method="post" id="kanjiTestForm">
+  <div class="container-fluid">
+    <form class="form-inline justify-content-center my-4" method="post" id="kanjiTestForm">
       {% csrf_token %}
-      <!-- Input with right margin -->
-      <input type="text" class="form-control mr-3" name="answer" placeholder="Enter the meaning">
-      <!-- Button -->
+      <input type="text" name="answer" class="form-control mr-3"  placeholder="Enter the meaning">
       <button type="submit" id="submitButton" class="btn btn-primary">Submit</button>
-  </form>
-
-  <div id="feedback" class="alert" role="alert"></div>
-  <div id="scoreDisplay">Score: {{ score }}</div>
-  <div id="results" class="alert" role="alert"></div>
-</div>
+    </form>
+    <div class="row justify-content-center">
+      <div class="col-md-12 alert text-center" id="feedback" role="alert"></div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-12 alert text-center" id="results" role="alert"></div>
+    </div>
+  </div>
+    <!-- <div id="feedback" class="alert" role="alert"></div>
+    <div id="results" class="alert" role="alert"></div>
+  </div> -->
 
 {% endblock %}
 
