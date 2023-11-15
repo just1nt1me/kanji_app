@@ -1,40 +1,44 @@
 {% extends "level-test/base.html" %}
 {% load custom_filters %}
 {% block content %}
-<h1>Test Results</h1>
+<main role="main" class="container">
+  <div class="container-fluid text-center">
+    <h1>Level Test Results</h1>
+  </div>
 
-{% for level, score in level_scores.items %}
-    {% with kanji_for_this_level=results|filter_kanji_by_level:level %}
-    {% if kanji_for_this_level %}
-        <h2>Level {{ level|upper }} Score: {{ score }}</h2>
+  {% for level, score in level_scores.items %}
+      {% with kanji_for_this_level=results|filter_kanji_by_level:level %}
+      {% if kanji_for_this_level %}
+          <h2 class="text-center">Level {{ level|upper }} Score: {{ score }}</h2>
 
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Kanji (reading)</th>
-                    <th>Input</th>
-                    <th>Correct</th>
-                    <th>Answer</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for kanji_expression, kanji_reading, kanji_level, correct, user_answer, correct_answer in kanji_for_this_level %}
-                    <tr>
-                        <td>{{ kanji_expression }} ({{ kanji_reading }})</td>
-                        <td>{{ user_answer }}</td>
-                        <td>
-                          {% if correct %}
-                              &#x2705;
-                          {% else %}
-                              &#x274C;
-                          {% endif %}
-                        </td>
-                        <td>{{ correct_answer }}</td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    {% endif %}
-    {% endwith %}
-{% endfor %}
-{% endblock %}
+          <table class="table table-hover table-striped table-bordered table-dark" border="1">
+              <thead class="thead-dark">
+                  <tr>
+                      <th scope="col">Kanji (reading)</th>
+                      <th scope="col">Input</th>
+                      <th scope="col">Correct</th>
+                      <th scope="col">Answer</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  {% for kanji_expression, kanji_reading, kanji_level, correct, user_answer, correct_answer in kanji_for_this_level %}
+                      <tr>
+                          <td scope="row">{{ kanji_expression }} ({{ kanji_reading }})</td>
+                          <td>{{ user_answer }}</td>
+                          <td>
+                            {% if correct %}
+                                &#x2705;
+                            {% else %}
+                                &#x274C;
+                            {% endif %}
+                          </td>
+                          <td>{{ correct_answer }}</td>
+                      </tr>
+                  {% endfor %}
+              </tbody>
+          </table>
+      {% endif %}
+      {% endwith %}
+  {% endfor %}
+  {% endblock %}
+</main>
