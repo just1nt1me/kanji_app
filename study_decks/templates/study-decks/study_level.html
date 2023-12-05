@@ -1,0 +1,46 @@
+{% extends "level-test/base.html" %}
+{% load static %}
+
+
+{% block content %}
+<main role="main" class="container">
+  <div id="kanji-container" class="container-fluid" style="background-color: rgb(158, 9, 146);">
+    <div class="row text-white" id="kanji">
+      <h1>{{ kanji_to_study.kanji.expression }}</h1>
+    </div>
+  </div>
+    <div class="row">
+      <button onclick="showDetails()">Show Meaning/Reading</button>
+      <div id="details" style="display:none;">
+        <p>Meaning: {{ kanji_to_study.kanji.meaning }}</p>
+        <p>Reading: {{ kanji_to_study.kanji.reading }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <button onclick="sendFeedback('Again')">Again</button>
+      <button onclick="sendFeedback('Hard')">Hard</button>
+      <button onclick="sendFeedback('Good')">Good</button>
+      <button onclick="sendFeedback('Easy')">Easy</button>
+    </div>
+
+  <script>
+  function showDetails() {
+      document.getElementById("details").style.display = "block";
+  }
+
+  function sendFeedback(feedback) {
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "", true);
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");
+      xhr.onreadystatechange = function() {
+          if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+              // Reload the page to show the next kanji
+              location.reload();
+          }
+      }
+      xhr.send("user_kanji_progress_id={{ kanji_to_study.id }}&feedback=" + feedback);
+  }
+  </script>
+</main>
+{% endblock %}

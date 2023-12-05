@@ -7,4 +7,4 @@ class Kanji(models.Model):
     expression = models.TextField()
     reading = models.TextField()
     meaning = models.TextField()
-    tags = models.ForeignKey(JLPTLevel, on_delete=models.CASCADE)
+    jlpt_level = models.ForeignKey(JLPTLevel, on_delete=models.CASCADE)
