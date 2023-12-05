@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import UserKanjiProgress
 
-# Create your views here.
+def study(request):
+    return render(request, 'study-decks/study.html')
+
+def deck(request):
+    return render(request, 'study-decks/deck.html')
