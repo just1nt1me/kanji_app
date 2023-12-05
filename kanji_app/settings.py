@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'study_decks.apps.StudyDecksConfig',
     'level_test.apps.LevelTestConfig',
     'crispy_forms',
     'kanji_app',
