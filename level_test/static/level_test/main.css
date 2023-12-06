@@ -83,20 +83,6 @@ a.article-title:hover {
   font-size: 2.5rem;
 }
 
-/* Style for a correct answer */
-input.user-answer.correct {
-  background-color: lightgreen;
-}
-
-/* Style for an incorrect answer */
-input.user-answer.incorrect {
-  background-color: lightcoral;
-}
-
-/* .btn-fixed-width {
-  width: 200px;
-} */
-
 #darkModeContainer {
   position: fixed;
   bottom: 20px;
