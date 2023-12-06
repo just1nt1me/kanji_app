@@ -2,12 +2,13 @@ import random
 from .models import Kanji
 from django.shortcuts import redirect
 
-from nltk.corpus import wordnet
+from nltk.corpus import wordnet, stopwords
 from nltk.tokenize import word_tokenize
+stop_words = set(stopwords.words('english'))
 
 # Define a function to compute WordNet-based similarity
 def wordnet_similarity(user_input, correct_answer):
-    user_tokens = word_tokenize(user_input)
+    user_tokens = [word for word in word_tokenize(user_input) if word.lower() not in stop_words]
     answer_tokens = word_tokenize(correct_answer)
 
     # Initialize a list to store individual word similarities

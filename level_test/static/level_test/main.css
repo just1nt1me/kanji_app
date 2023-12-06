@@ -1,7 +1,7 @@
 body {
   background: #fafafa;
   color: #333333;
-  margin-top: 1rem;
+  margin-top: 5rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -30,7 +30,7 @@ ul {
 
 .content-section {
   background: #ffffff;
-  /* padding: 3px 20px; */
+  padding: 3px 20px;
   border: 1px solid #000000;
   border-radius: 3px;
   margin-bottom: 20px;
@@ -82,20 +82,6 @@ a.article-title:hover {
 .account-heading {
   font-size: 2.5rem;
 }
-
-/* Style for a correct answer */
-input.user-answer.correct {
-  background-color: lightgreen;
-}
-
-/* Style for an incorrect answer */
-input.user-answer.incorrect {
-  background-color: lightcoral;
-}
-
-/* .btn-fixed-width {
-  width: 200px;
-} */
 
 #darkModeContainer {
   position: fixed;
