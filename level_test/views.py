@@ -16,7 +16,7 @@ def start_test(request):
     # Start with only the first level
     levels = ["n5", "n4", "n3", "n2", "n1"]
     kanji_deck = []
-    kanji_for_level = list(Kanji.objects.filter(tags__level=levels[0]).values_list('id', flat=True))
+    kanji_for_level = list(Kanji.objects.filter(jlpt_level__level=levels[0]).values_list('id', flat=True))
     kanji_deck.extend(random.sample(kanji_for_level, 10))
 
     request.session['kanji_deck'] = kanji_deck

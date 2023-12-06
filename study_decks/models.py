@@ -5,9 +5,8 @@ from django.contrib.auth.models import User
 class UserKanjiProgress(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     kanji = models.ForeignKey(Kanji, on_delete=models.CASCADE)
-    last_reviewed = models.DateField(auto_now_add=True)
+    last_reviewed = models.DateField(auto_now=True)
     next_review = models.DateField()
-    proficiency_level = models.IntegerField(default=0)  # You can customize this based on your spaced repetition algorithm
-
-    def __str__(self):
-        return f"{self.user.username} - {self.kanji.character}"
+    repetition = models.IntegerField(default=0)
+    ease_factor = models.FloatField(default=2.5)
+    interval = models.IntegerField(default=0)  # Days until next review
