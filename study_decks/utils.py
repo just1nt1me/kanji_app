@@ -3,6 +3,47 @@ from django.db.models import Min
 from level_test.models import Kanji
 from .models import UserKanjiProgress
 import random
+from django.db import transaction
+
+def initialize_kanji(user, jlpt_level, num_kanji_needed=20):
+    # Start a transaction to ensure database integrity
+    with transaction.atomic():
+        # Find out how many kanji progress records already exist for this user and level
+        existing_progress_count = UserKanjiProgress.objects.filter(
+            user=user,
+            kanji__jlpt_level=jlpt_level,
+        ).count()
+
+        # Calculate how many new kanji progress records are needed for this session
+        kanji_to_initialize = num_kanji_needed - existing_progress_count
+
+        # If additional kanji progress records are needed, create them
+        if kanji_to_initialize > 0:
+            # Get the kanji for which the user does not have progress records yet
+            kanji_ids_with_progress = UserKanjiProgress.objects.filter(
+                user=user,
+                kanji__jlpt_level=jlpt_level,
+            ).values_list('kanji_id', flat=True)
+
+            kanji_without_progress = Kanji.objects.filter(
+                jlpt_level=jlpt_level
+            ).exclude(id__in=kanji_ids_with_progress)[:kanji_to_initialize]
+
+            # Create progress records for the needed number of kanji
+            progress_list = [
+                UserKanjiProgress(
+                    user=user,
+                    kanji=kanji_item,
+                    last_reviewed=None,  # No review date set for new records
+                    next_review=date.today(),  # Set the review date to today
+                    # Set other fields as needed
+                )
+                for kanji_item in kanji_without_progress
+            ]
+
+            UserKanjiProgress.objects.bulk_create(progress_list)
+
+
 
 def get_kanji_for_study(user, jlpt_level):
     # Get kanji that have been studied and are due for review

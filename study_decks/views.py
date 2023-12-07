@@ -4,7 +4,7 @@ from .forms import UserRegisterForm
 from django.contrib.auth.decorators import login_required
 from level_test.models import Kanji
 from .models import UserKanjiProgress
-from .utils import get_kanji_for_study, update_sm2_progress
+from .utils import initialize_kanji, get_kanji_for_study, update_sm2_progress
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
@@ -48,6 +48,9 @@ def study_level(request, jlpt_level):
             return JsonResponse({'next_kanji': None})
 
     else:
+        # Initialize kanji progress for the session if needed
+        initialize_kanji(request.user, jlpt_level)
+
         # GET request: Render the initial study page
         kanji_to_study = get_kanji_for_study(request.user, jlpt_level)
 
