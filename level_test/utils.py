@@ -89,7 +89,7 @@ def handle_test_completion_or_advancement(request):
     # Check if there are more levels left
     if current_level_index < len(levels) - 1:
         next_level_index = current_level_index + 1  # Incrementing level here
-        kanji_for_level = list(Kanji.objects.filter(tags__level=levels[next_level_index]).values_list('id', flat=True))
+        kanji_for_level = list(Kanji.objects.filter(jlpt_level__level=levels[next_level_index]).values_list('id', flat=True))
         request.session['kanji_deck'] = random.sample(kanji_for_level, 10)
         request.session['current_index'] = 0
         request.session['score'] = 0
