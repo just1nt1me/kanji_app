@@ -33,16 +33,26 @@ def study_level(request, jlpt_level):
         user_kanji_progress = UserKanjiProgress.objects.get(id=user_kanji_progress_id)
         update_sm2_progress(user_kanji_progress, feedback)
 
-        return JsonResponse({'status': 'success'})
+        # Fetch the next kanji for study after updating
+        next_kanji_to_study = get_kanji_for_study(request.user, jlpt_level)
 
-    # Fetch a kanji for study
-    kanji_to_study = get_kanji_for_study(request.user, jlpt_level)
-    if not kanji_to_study:
-        # No kanji to study, redirect or show a message
-        return render(request, 'no_kanji_to_study.html')
+        if next_kanji_to_study:
+            next_kanji_data = {
+                'id': next_kanji_to_study[0].id,
+                'expression': next_kanji_to_study[0].kanji.expression,
+                'meaning': next_kanji_to_study[0].kanji.meaning,
+                'reading': next_kanji_to_study[0].kanji.reading,
+            }
+            return JsonResponse({'next_kanji': next_kanji_data})
+        else:
+            return JsonResponse({'next_kanji': None})
 
-    context = {
-        'kanji_to_study': kanji_to_study[0],  # Display one kanji at a time
-        'jlpt_level': jlpt_level
-    }
-    return render(request, 'study-decks/study_level.html', context)
+    else:
+        # GET request: Render the initial study page
+        kanji_to_study = get_kanji_for_study(request.user, jlpt_level)
+
+        context = {
+            'kanji_to_study': kanji_to_study[0] if kanji_to_study else None,
+            'jlpt_level': jlpt_level
+        }
+        return render(request, 'study-decks/study_level.html', context)

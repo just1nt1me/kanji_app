@@ -1,31 +1,35 @@
 from datetime import date, timedelta
+from django.db.models import Min
 from level_test.models import Kanji
 from .models import UserKanjiProgress
+import random
 
 def get_kanji_for_study(user, jlpt_level):
-    # Get all kanji for the specified JLPT level
-    kanji = Kanji.objects.filter(jlpt_level=jlpt_level)
-
-    # Get or create user progress for these kanji
-    for k in kanji:
-        progress, created = UserKanjiProgress.objects.get_or_create(
-            user=user,
-            kanji=k,
-            defaults={'next_review': date.today()}
-        )
-        if created:
-            # If the progress record is newly created, set the next review to today
-            progress.next_review = date.today()
-            progress.save()
-
-    # Select kanji based on the next review date
-    kanji_to_study = UserKanjiProgress.objects.filter(
+    # Get kanji that have been studied and are due for review
+    reviewed_kanji = UserKanjiProgress.objects.filter(
         user=user,
         kanji__jlpt_level=jlpt_level,
-        next_review__lte=date.today()
-    ).order_by('next_review')[:10]  # Limit to 10 kanji for the session
+        next_review__lte=date.today(),
+        last_reviewed__isnull=False  # This will only include kanji that have been reviewed
+    ).order_by('next_review')[:20]
 
-    return kanji_to_study
+    # If there are fewer than 20 reviewed kanji, fill the rest with unreviewed kanji
+    if reviewed_kanji.count() < 20:
+        remaining_slots = 20 - reviewed_kanji.count()
+        unreviewed_kanji = UserKanjiProgress.objects.filter(
+            user=user,
+            kanji__jlpt_level=jlpt_level,
+            last_reviewed__isnull=True  # This will include kanji that have not been reviewed
+        )[:remaining_slots]
+
+        kanji_to_study = list(reviewed_kanji) + list(unreviewed_kanji)
+    else:
+        kanji_to_study = reviewed_kanji
+
+    kanji_to_study_list = list(kanji_to_study)
+    random.shuffle(kanji_to_study_list)
+
+    return kanji_to_study_list
 
 # Updated function to match user feedback ("Again", "Hard", "Good", "Easy") to quality scores
 def update_sm2_progress(user_kanji_progress, feedback):

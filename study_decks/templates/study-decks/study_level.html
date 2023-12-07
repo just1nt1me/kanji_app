@@ -7,6 +7,7 @@
   <div id="kanji-container" class="container-fluid" style="background-color: rgb(158, 9, 146);">
     <div class="row text-white" id="kanji">
       <h1>{{ kanji_to_study.kanji.expression }}</h1>
+      <input type="hidden" id="user_kanji_progress_id" value="{{ kanji_to_study.id }}">
     </div>
   </div>
     <div class="row">
@@ -16,31 +17,69 @@
         <p>Reading: {{ kanji_to_study.kanji.reading }}</p>
       </div>
     </div>
-    <div class="row">
-      <button onclick="sendFeedback('Again')">Again</button>
-      <button onclick="sendFeedback('Hard')">Hard</button>
-      <button onclick="sendFeedback('Good')">Good</button>
-      <button onclick="sendFeedback('Easy')">Easy</button>
+    <div id="buttons" class="row">
+      <button class="quality-button" onclick="sendFeedback('Again')">Again</button>
+      <button class="quality-button" onclick="sendFeedback('Hard')">Hard</button>
+      <button class="quality-button" onclick="sendFeedback('Good')">Good</button>
+      <button class="quality-button" onclick="sendFeedback('Easy')">Easy</button>
     </div>
 
-  <script>
-  function showDetails() {
-      document.getElementById("details").style.display = "block";
-  }
 
-  function sendFeedback(feedback) {
-      var xhr = new XMLHttpRequest();
-      xhr.open("POST", "", true);
-      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-      xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");
-      xhr.onreadystatechange = function() {
-          if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-              // Reload the page to show the next kanji
-              location.reload();
-          }
-      }
-      xhr.send("user_kanji_progress_id={{ kanji_to_study.id }}&feedback=" + feedback);
-  }
+  <script>
+    function showDetails() {
+      document.getElementById("details").style.display = "block";
+    }
+
+    function sendFeedback(feedback) {
+        var userKanjiProgressId = document.getElementById("user_kanji_progress_id").value;
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");
+
+        // Optional: Disable buttons while the request is being processed
+        setQualityButtonsEnabled(false);
+
+        xhr.onreadystatechange = function() {
+            if (this.readyState == XMLHttpRequest.DONE) {
+                // Optional: Re-enable buttons after request is complete
+                setQualityButtonsEnabled(true);
+
+                if (this.status == 200) {
+                    var response = JSON.parse(this.responseText);
+                    if (response.next_kanji) {
+                        // Update kanji expression and details
+                        updateKanjiDisplay(response.next_kanji);
+                    } else {
+                        // Handle the case where there are no more kanji to study
+                        document.getElementById("kanji-container").innerHTML = '<p>Study session complete!</p>';
+                    }
+                } else {
+                    // Handle HTTP errors here
+                }
+            }
+        }
+        xhr.send("user_kanji_progress_id=" + userKanjiProgressId + "&feedback=" + feedback);
+    }
+
+    function updateKanjiDisplay(nextKanji) {
+        var kanjiElem = document.querySelector("#kanji h1");
+        kanjiElem.textContent = nextKanji.expression;
+
+        var detailsElem = document.getElementById("details");
+        detailsElem.innerHTML = 'Meaning: ' + nextKanji.meaning + '<br>Reading: ' + nextKanji.reading;
+        detailsElem.style.display = "none";
+
+        document.getElementById("user_kanji_progress_id").value = nextKanji.id;
+    }
+
+    function setQualityButtonsEnabled(enabled) {
+        var buttons = document.querySelectorAll(".quality-button");
+        buttons.forEach(function(button) {
+            button.disabled = !enabled;
+        });
+    }
+
   </script>
 </main>
 {% endblock %}

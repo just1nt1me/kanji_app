@@ -16,8 +16,13 @@
     </form>
   </div>
   <div class="row justify-content-center">
-    <a href="{% url 'study-level' jlpt_level=2 %}" class="btn btn-success btn-lg mb-2">N2</a>
+    <form action="{% url 'study-level' jlpt_level=2 %}" method="get">
+      <button type="submit" class="btn btn-success btn-lg mb-2">N2</button>
+    </form>
   </div>
+  <!-- <div class="row justify-content-center">
+    <a href="{% url 'study-level' jlpt_level=2 %}" class="btn btn-success btn-lg mb-2">N2</a>
+  </div> -->
   <div class="row justify-content-center">
     <a href="{% url 'study-level' jlpt_level=3 %}" class="btn btn-info btn-lg mb-2">N3</a>
   </div>
