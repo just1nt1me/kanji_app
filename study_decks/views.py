@@ -20,10 +20,10 @@ def register(request):
         form = UserRegisterForm()
     return render(request, 'registration/register.html', {'form': form})
 
+@login_required
 def study(request):
     return render(request, 'study-decks/study.html')
 
-@login_required
 def study_level(request, jlpt_level):
     if request.method == 'POST':
         # Handle user feedback and update progress
