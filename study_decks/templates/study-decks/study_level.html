@@ -9,8 +9,8 @@
       <h1 class="display-1 text-center my-4">{{ kanji_to_study.kanji.expression }}</h1>
       <input type="hidden" id="user_kanji_progress_id" value="{{ kanji_to_study.id }}">
       <div id="details" class="text-center" style="display:none;">
-        <p>Meaning: {{ kanji_to_study.kanji.meaning }}</p>
-        <p>Reading: {{ kanji_to_study.kanji.reading }}</p>
+        <h2 class="display">{{ kanji_to_study.kanji.reading }}</h2>
+        <h2 class="display">{{ kanji_to_study.kanji.meaning }}</h2>
       </div>
     </div>
   </div>
