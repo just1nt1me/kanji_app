@@ -1,4 +1,4 @@
-body {
+/* body {
   font-family: 'Arial', sans-serif;
   background-color: #f3f3f3;
   text-align: center;
@@ -6,12 +6,12 @@ body {
 }
 
 h1 {
-  color: #3e73e7;
+  color: #cccccc;
 }
 
 h2 {
   color: #555;
-}
+} */
 
 #currentKanji {
   font-size: 80px;
@@ -24,18 +24,10 @@ h2 {
 
 input[type="text"] {
   font-size: 20px;
-  padding: 10px;
+  /* padding: 10px; */
   border: 2px solid #cccccc;
   width: 300px;
   transition: border-color 0.3s;
-}
-
-.correct {
-  border-color: green;
-}
-
-.incorrect {
-  border-color: red;
 }
 
 #submitButton {
@@ -43,7 +35,9 @@ input[type="text"] {
   padding: 10px;
   border: 2px solid #cccccc;
   width: 100px;
+  background-color: #cccccc;
   transition: border-color 0.3s;
+  margin-left: 10px;
 }
 
 #scoreDisplay {
@@ -52,7 +46,7 @@ input[type="text"] {
 
 #feedback {
   margin-top: 20px;
-  color: #7e1779;
+  color: #a21e9c;
   font-weight: bold;
 }
 

@@ -41,12 +41,6 @@
     </header>
     <main>
           {% block content %}{% endblock %}
-      <div id="darkModeContainer">
-        <label class="switch">
-            <input type="checkbox" id="darkModeToggle">
-            <span class="slider"></span>
-        </label>
-      </div>
     </main>
 
     <!-- Optional JavaScript -->
@@ -57,35 +51,6 @@
 
     <!-- Custom Scripts Block -->
     {% block scripts %}
-    <script>
-      const darkModeToggle = document.getElementById('darkModeToggle');
-
-      darkModeToggle.addEventListener('change', function() {
-          if (this.checked) {
-              document.body.classList.add('dark-mode');
-          } else {
-              document.body.classList.remove('dark-mode');
-          }
-      });
-
-      document.addEventListener('DOMContentLoaded', function() {
-          if (localStorage.getItem('dark-mode') === 'enabled') {
-              darkModeToggle.checked = true;
-              document.body.classList.add('dark-mode');
-          }
-      });
-
-      darkModeToggle.addEventListener('change', function() {
-          if (this.checked) {
-              document.body.classList.add('dark-mode');
-              localStorage.setItem('dark-mode', 'enabled');
-          } else {
-              document.body.classList.remove('dark-mode');
-              localStorage.removeItem('dark-mode');
-          }
-      });
-
-    </script>
     {% endblock %}
 
   </body>
