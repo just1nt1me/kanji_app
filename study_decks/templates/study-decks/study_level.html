@@ -15,7 +15,7 @@
     </div>
   </div>
     <div class="row justify-content-center my-4">
-      <button class="btn btn-primary btn-lg" onclick="showDetails()">Show Meaning/Reading</button>
+      <button class="btn btn-primary btn-lg" id="toggle-details-button" onclick="toggleDetails()">Show Answer</button>
     </div>
     <div id="buttons" class="justify-content-center text-center my-4">
       <button type="button" class="quality-button btn btn-lg btn-danger" onclick="sendFeedback('Again')">Again</button>
@@ -26,9 +26,19 @@
 
 
   <script>
-    function showDetails() {
-      document.getElementById("details").style.display = "block";
+    function toggleDetails() {
+        var detailsElem = document.getElementById("details");
+        var toggleButton = document.getElementById("toggle-details-button");
+
+        if (detailsElem.style.display === "none" || detailsElem.style.display === "") {
+            detailsElem.style.display = "block";
+            toggleButton.textContent = "Hide Answer";
+        } else {
+            detailsElem.style.display = "none";
+            toggleButton.textContent = "Show Answer";
+        }
     }
+
 
     function sendFeedback(feedback) {
         var userKanjiProgressId = document.getElementById("user_kanji_progress_id").value;
@@ -50,9 +60,10 @@
                     if (response.next_kanji) {
                         // Update kanji expression and details
                         updateKanjiDisplay(response.next_kanji);
+                        resetDetails();
                     } else {
                         // Handle the case where there are no more kanji to study
-                        document.getElementById("kanji-container").innerHTML = '<p>Study session complete!</p>';
+                        document.getElementById("kanji-container").innerHTML = '<h2 class="display">Study session complete!</h2>';
                     }
                 } else {
                     // Handle HTTP errors here
@@ -62,12 +73,21 @@
         xhr.send("user_kanji_progress_id=" + userKanjiProgressId + "&feedback=" + feedback);
     }
 
+    function resetDetails() {
+        var detailsElem = document.getElementById("details");
+        var toggleButton = document.getElementById("toggle-details-button");
+
+        detailsElem.style.display = "none";
+        toggleButton.textContent = "Show Answer";
+    }
+
     function updateKanjiDisplay(nextKanji) {
         var kanjiElem = document.querySelector("#kanji h1");
         kanjiElem.textContent = nextKanji.expression;
 
         var detailsElem = document.getElementById("details");
-        detailsElem.innerHTML = 'Meaning: ' + nextKanji.meaning + '<br>Reading: ' + nextKanji.reading;
+        detailsElem.innerHTML = '<h2 class="display">' + nextKanji.reading + '</h2>' +
+                                '<h2 class="display">' + nextKanji.meaning + '</h2>';
         detailsElem.style.display = "none";
 
         document.getElementById("user_kanji_progress_id").value = nextKanji.id;
