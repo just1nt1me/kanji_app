@@ -4,24 +4,24 @@
 
 {% block content %}
 <main role="main" class="container">
-  <div id="kanji-container" class="container-fluid" style="background-color: rgb(158, 9, 146);">
-    <div class="row text-white" id="kanji">
-      <h1>{{ kanji_to_study.kanji.expression }}</h1>
+  <div id="kanji-container" class="card" style="background-color: rgb(158, 9, 146);">
+    <div class="card-body" id="kanji">
+      <h1 class="display-1 text-center my-4">{{ kanji_to_study.kanji.expression }}</h1>
       <input type="hidden" id="user_kanji_progress_id" value="{{ kanji_to_study.id }}">
-    </div>
-  </div>
-    <div class="row">
-      <button onclick="showDetails()">Show Meaning/Reading</button>
-      <div id="details" style="display:none;">
-        <p>Meaning: {{ kanji_to_study.kanji.meaning }}</p>
-        <p>Reading: {{ kanji_to_study.kanji.reading }}</p>
+      <div id="details" class="text-center" style="display:none;">
+        <h2 class="display">{{ kanji_to_study.kanji.reading }}</h2>
+        <h2 class="display">{{ kanji_to_study.kanji.meaning }}</h2>
       </div>
     </div>
-    <div id="buttons" class="row">
-      <button class="quality-button" onclick="sendFeedback('Again')">Again</button>
-      <button class="quality-button" onclick="sendFeedback('Hard')">Hard</button>
-      <button class="quality-button" onclick="sendFeedback('Good')">Good</button>
-      <button class="quality-button" onclick="sendFeedback('Easy')">Easy</button>
+  </div>
+    <div class="row justify-content-center my-4">
+      <button class="btn btn-primary btn-lg" onclick="showDetails()">Show Meaning/Reading</button>
+    </div>
+    <div id="buttons" class="justify-content-center text-center my-4">
+      <button type="button" class="quality-button btn btn-lg btn-danger" onclick="sendFeedback('Again')">Again</button>
+      <button type="button" class="quality-button btn btn-lg btn-warning" onclick="sendFeedback('Hard')">Hard</button>
+      <button type="button" class="quality-button btn btn-lg btn-info" onclick="sendFeedback('Good')">Good</button>
+      <button type="button" class="quality-button btn btn-lg btn-success" onclick="sendFeedback('Easy')">Easy</button>
     </div>
 
 

@@ -9,7 +9,7 @@
 {% block content %}
 <main role="main" class="container">
   <h1 class="text-center">Choose a JLPT Level to start studying</h1>
-  <div class="row justify-content-center my-4">
+  <div class="justify-content-center text-center my-4">
     <a href="{% url 'study-level' jlpt_level='n1' %}" class="btn btn-primary btn-lg mb-2">N1</a>
     <a href="{% url 'study-level' jlpt_level='n2' %}" class="btn btn-info btn-lg mb-2">N2</a>
     <a href="{% url 'study-level' jlpt_level='n3' %}" class="btn btn-success btn-lg mb-2">N3</a>
