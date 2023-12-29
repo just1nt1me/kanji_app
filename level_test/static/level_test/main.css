@@ -38,3 +38,7 @@ ul {
   margin-top: 15px;
   margin-bottom: 20px;
 }
+
+#kanji-container {
+  min-height: 300px; /* Adjust the value to fit the content when details are displayed */
+}
