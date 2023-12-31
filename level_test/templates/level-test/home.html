@@ -10,16 +10,32 @@
 <main role="main" class="container">
   <h1 class="text-center">Welcome to the JLPT Kanji Study website</h1>
   <p class="text-center">Choose an option below to get started</p>
-  <div class="row justify-content-center">
-    <form action="{% url 'start_test' %}" method="get">
-      <button type="submit" class="btn btn-primary btn-lg mb-2">Kanji Level Test</button>
-    </form>
+  <div class="card text-white bg-primary mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Kanji Level Test</h5>
+      <p class="card-text">Check your current JLPT level. Answer the meaning for 10 kanji and see how many levels you can complete!</p>
+      <form action="{% url 'start_test' %}" method="get">
+        <button type="submit" class="btn btn-light btn-lg btn-block mb-2">Start the Level Test</button>
+      </form>
+    </div>
   </div>
-  <div class="row justify-content-center">
-    <a href="{% url 'study' %}" class="btn btn-success btn-lg mb-2">Study Decks</a>
+  <div class="card text-white bg-success mb-3">
+    <div class="card-body">
+      <h5 class="card-title">JLPT Study Decks</h5>
+      <p class="card-text">Choose a JLPT Level and start studying kanji. User Login required.</p>
+      <form action="{% url 'study' %}" method="get">
+        <button type="submit" class="btn btn-light btn-lg btn-block mb-2">Study Kanji</button>
+      </form>
+    </div>
   </div>
-  <div class="row justify-content-center">
-    <a href="#" class="btn btn-secondary btn-lg mb-2">Statistics</a>
+  <div class="card text-white bg-danger mb-3">
+    <div class="card-body">
+      <h5 class="card-title">User Stats</h5>
+      <p class="card-text">Check your study progress for each level. User Login required.</p>
+      <form action="#" method="get">
+        <button type="submit" class="btn btn-light btn-lg btn-block mb-2">Check your Stats</button>
+      </form>
+    </div>
   </div>
 </main>
 {% endblock content %}
